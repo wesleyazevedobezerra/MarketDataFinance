@@ -1,0 +1,60 @@
+## Ignore arquivos do Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Ignore arquivos de build
+bin/
+obj/
+out/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.log
+*.db
+*.mdb
+*.zip
+*.tar.gz
+*.nupkg
+*.snupkg
+
+## Ignore configurações locais e IDEs
+.vscode/
+.idea/
+*.swp
+
+## Ignore arquivos de teste e publicação
+TestResults/
+*.coverage
+*.coveragexml
+*.codecoverage
+*.ncrunch*
+*.vsmdi
+*.psess
+
+## Ignore arquivos do ReSharper
+_ReSharper*/
+*.DotSettings.user
+
+## Ignore arquivos de pacotes
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Ignore arquivos gerados pelo Rider
+.idea/
+*.sln.iml
+
+## Logs e temporários
+*.tmp
+*.temp
+*.bak
+*.orig
+
+## Configurações específicas do Mac/Linux
+.DS_Store
+Thumbs.db
