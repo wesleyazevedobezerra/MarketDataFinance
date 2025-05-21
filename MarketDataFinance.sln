@@ -1,9 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketDataFinance", "MarketDataFinance\MarketDataFinance.csproj", "{C0D669A3-E2B5-466C-B66D-D73767E1AF30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketDataFinance.Application", "MarketDataFinance.Application\MarketDataFinance.Application.csproj", "{F2507E94-E538-4C1D-BB38-A512D128FD0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketDataFinance.Adapter", "MarketDataFinance.Adapter\MarketDataFinance.Adapter.csproj", "{1CE2C455-9C58-4C50-96FC-7703E5977D66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketDataFinance.Domain", "MarketDataFinance.Domain\MarketDataFinance.Domain.csproj", "{42997DFE-C544-4A05-A4E5-583EFDD8FA4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketDataFinance.Infrastructure.CrossCutting", "MarketDataFinance.Infrastructure.CrossCutting\MarketDataFinance.Infrastructure.CrossCutting.csproj", "{ED9E4AE4-148D-433A-BA8F-138840CF7947}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketDataFinance.Infrastructure.Data", "MarketDataFinance.Infrastructure.Data\MarketDataFinance.Infrastructure.Data.csproj", "{55050953-313B-4D67-A08C-AE07E5514B47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +25,26 @@ Global
 		{C0D669A3-E2B5-466C-B66D-D73767E1AF30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0D669A3-E2B5-466C-B66D-D73767E1AF30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0D669A3-E2B5-466C-B66D-D73767E1AF30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2507E94-E538-4C1D-BB38-A512D128FD0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2507E94-E538-4C1D-BB38-A512D128FD0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2507E94-E538-4C1D-BB38-A512D128FD0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2507E94-E538-4C1D-BB38-A512D128FD0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CE2C455-9C58-4C50-96FC-7703E5977D66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CE2C455-9C58-4C50-96FC-7703E5977D66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CE2C455-9C58-4C50-96FC-7703E5977D66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CE2C455-9C58-4C50-96FC-7703E5977D66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42997DFE-C544-4A05-A4E5-583EFDD8FA4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42997DFE-C544-4A05-A4E5-583EFDD8FA4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42997DFE-C544-4A05-A4E5-583EFDD8FA4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42997DFE-C544-4A05-A4E5-583EFDD8FA4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED9E4AE4-148D-433A-BA8F-138840CF7947}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED9E4AE4-148D-433A-BA8F-138840CF7947}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED9E4AE4-148D-433A-BA8F-138840CF7947}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED9E4AE4-148D-433A-BA8F-138840CF7947}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55050953-313B-4D67-A08C-AE07E5514B47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55050953-313B-4D67-A08C-AE07E5514B47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55050953-313B-4D67-A08C-AE07E5514B47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55050953-313B-4D67-A08C-AE07E5514B47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

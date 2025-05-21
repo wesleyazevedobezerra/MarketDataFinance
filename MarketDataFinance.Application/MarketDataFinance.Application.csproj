@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MarketDataFinance.Domain\MarketDataFinance.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
