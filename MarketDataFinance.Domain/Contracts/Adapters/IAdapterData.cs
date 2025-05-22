@@ -13,7 +13,6 @@ namespace MarketDataFinance.Domain.Contracts.Adapters
         Task<RootEntity> SearchMarketCrypto();
 
         Task<SummaryRootEntity> SearchMarketSummary(string symbol);
-        Task<RootEntity> SearchMarketCrypto();
         Task<RootEntity> SearchMarketOverview();
     }
 }
