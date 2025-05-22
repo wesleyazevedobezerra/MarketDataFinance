@@ -1,5 +1,4 @@
 ﻿using MarketDataFinance.Application.ViewModels;
-using MarketDataFinance.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +7,9 @@ using System.Threading.Tasks;
 
 namespace MarketDataFinance.Application.Interfaces
 {
-    public interface IDataAppServices
+    public interface ISummaryAppService
     {
-        Task<RootViewModel> SearchMarketETF();
 
-        Task<RootViewModel> SearchMarketCrypto();
+        Task<SummaryViewModel> SearchMarketSummary(string symbol);
     }
 }

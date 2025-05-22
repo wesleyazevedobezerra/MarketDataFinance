@@ -10,6 +10,8 @@ namespace MarketDataFinance.Domain.Contracts.Adapters
     public interface IAdapterData
     {
         Task<RootEntity> SearchMarketETF();
-        Task<DataEntity> SearchMarketCrypto();
+        Task<RootEntity> SearchMarketCrypto();
+
+        Task<SummaryRootEntity> SearchMarketSummary(string symbol);
     }
 }

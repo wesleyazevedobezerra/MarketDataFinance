@@ -19,10 +19,10 @@ namespace MarketDataFinance.Application.Services
             _dataAdapter = dataAdapter;
         }
 
-        public async Task<DataViewModel> SearchMarketCrypto()
+        public async Task<RootViewModel> SearchMarketCrypto()
         {
             var entity = await _dataAdapter.SearchMarketCrypto();
-            return TypeAdapter.Adapt<DataEntity, DataViewModel>(entity);
+            return TypeAdapter.Adapt<RootEntity, RootViewModel>(entity);
         }
 
         public async Task<RootViewModel> SearchMarketETF()
