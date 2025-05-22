@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,4 +45,25 @@ namespace MarketDataFinance.Domain.Entities
         public DataEntity Data { get; set; }
         public ModuleEntity Module { get; set; }
     }
+
+    public class Datum
+    {
+        public OptionsEntity options { get; set; }
+        public string underlyingSymbol { get; set; }
+        public QuoteEntity quote { get; set; }
+        public bool hasMiniOptions { get; set; }
+        public ExpirationDatesEntity expirationDates { get; set; }
+        public StrikesEntity strikes { get; set; }
+    }
+
+    public class ExpirationDatesEntity
+    {
+    }
+    public class StrikesEntity
+    {
+    }
+    public class OptionsEntity
+    {
+    }
+
 }

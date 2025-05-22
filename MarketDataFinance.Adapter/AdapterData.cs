@@ -17,7 +17,10 @@ namespace MarketDataFinance.Adapter
         {
             using (HttpClient http = new HttpClient())
             {
-                var response = await http.GetAsync($"https://yahoo-finance-api-data.p.rapidapi.com/market/etf?screenerId=COMMODITY_ETFS&region=us&offset=0&limit=0");
+                http.DefaultRequestHeaders.Add("x-rapidapi-host", "yahoo-finance-api-data.p.rapidapi.com");
+                http.DefaultRequestHeaders.Add("x-rapidapi-key", "5f7cb7d7eemshfead8b6141e8079p16ce7cjsne53484c89fd4");
+
+                var response = await http.GetAsync($"https://yahoo-finance-api-data.p.rapidapi.com/market/crypto?screenerId=FIFTY_TWO_WK_GAINERS_CRYPTOCURRENCIES&offset=0&limit=0");
                 if (response.IsSuccessStatusCode)
                 {
                     var responseBody = await response.Content.ReadAsStringAsync();

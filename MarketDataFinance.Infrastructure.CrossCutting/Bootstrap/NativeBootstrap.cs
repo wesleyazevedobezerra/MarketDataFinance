@@ -12,6 +12,7 @@ namespace MarketDataFinance.Infrastructure.CrossCutting.Bootstrap
         public static void serviceLocation(IServiceCollection services)
         {
             services.AddScoped<IDataAppServices, DataAppServices>();
+            services.AddScoped<ISummaryAppService, SummaryAppService>();
             services.AddScoped<IAdapterData, AdapterData>();
 
         }
