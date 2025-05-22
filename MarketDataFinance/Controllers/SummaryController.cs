@@ -29,7 +29,7 @@ namespace MarketDataFinance.Controllers
         [HttpGet("related-list")]
         public async Task<IActionResult> GetRelatedList([FromQuery] string symbol, [FromQuery] int limit)
         {
-            return Ok(await _summaryAppService.SearchMarketSummary(symbol));
+            return Ok(await _summaryAppService.SearchMarketSummaryRelatedList(symbol, limit));
         }
 
 

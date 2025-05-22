@@ -12,7 +12,7 @@ namespace MarketDataFinance.Domain.Entities
         public string Exchange { get; set; }
         public double FiftyTwoWeekHighChange { get; set; }
         public string CustomPriceAlertConfidence { get; set; }
-        public int AverageDailyVolume10Day { get; set; }
+        public long AverageDailyVolume10Day { get; set; }
         public string ShortName { get; set; }
         public bool Triggerable { get; set; }
         public double AnnualReturnNavY3 { get; set; }
@@ -46,7 +46,7 @@ namespace MarketDataFinance.Domain.Entities
         public string FullExchangeName { get; set; }
         public double RegularMarketPreviousClose { get; set; }
         public string Symbol { get; set; }
-        public int RegularMarketVolume { get; set; }
+        public long RegularMarketVolume { get; set; }
         public double YtdReturn { get; set; }
         public string Market { get; set; }
         public double FiftyDayAverage { get; set; }
@@ -59,7 +59,7 @@ namespace MarketDataFinance.Domain.Entities
         public int PriceHint { get; set; }
         public int AskSize { get; set; }
         public string TypeDisp { get; set; }
-        public int AverageDailyVolume3Month { get; set; }
+        public long AverageDailyVolume3Month { get; set; }
         public string QuoteType { get; set; }
         public string RegularMarketDayRange { get; set; }
         public double FiftyTwoWeekHighChangePercent { get; set; }
@@ -68,15 +68,15 @@ namespace MarketDataFinance.Domain.Entities
         public double FiftyTwoWeekLowChangePercent { get; set; }
         public string Region { get; set; }
         public string FiftyTwoWeekRange { get; set; }
-        public CorporateActionsEntity CorporateActions { get; set; }
+        //public CorporateActionsEntity CorporateActions { get; set; }
         public double TrailingThreeMonthNavReturns { get; set; }
         public double TwoHundredDayAverageChange { get; set; }
         public double FiftyTwoWeekHigh { get; set; }
         public long NetAssets { get; set; }
         public bool EsgPopulated { get; set; }
-        public int? TrailingAnnualDividendYield { get; set; }
-        public int? TrailingAnnualDividendRate { get; set; }
-        public int? DividendDate { get; set; }
+        public double TrailingAnnualDividendYield { get; set; }
+        public double TrailingAnnualDividendRate { get; set; }
+        public double DividendDate { get; set; }
         public double? EpsTrailingTwelveMonths { get; set; }
         public double? TrailingPE { get; set; }
         public double? YieldTTM { get; set; }

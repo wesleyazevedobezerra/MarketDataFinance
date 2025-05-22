@@ -25,7 +25,6 @@ namespace MarketDataFinance.Application.ViewModels
 
     public class DatumViewModel
     {
-        public OptionsViewModel options { get; set; }
         public string underlyingSymbol { get; set; }
         public QuoteViewModel quote { get; set; }
         public bool hasMiniOptions { get; set; }
@@ -39,7 +38,5 @@ namespace MarketDataFinance.Application.ViewModels
     public class StrikesViewModel
     {
     }
-    public class OptionsViewModel
-    {
-    }
+    
 }

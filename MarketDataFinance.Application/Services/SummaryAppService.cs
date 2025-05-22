@@ -24,6 +24,11 @@ namespace MarketDataFinance.Application.Services
             var entity = await _dataAdapter.SearchMarketSummary(symbol);
             return TypeAdapter.Adapt<SummaryRootEntity, SummaryViewModel>(entity);
         }
-      
+
+        public async Task<SummaryViewModel> SearchMarketSummaryRelatedList(string symbol, int limit)
+        {
+            var entity = await _dataAdapter.SearchMarketSummaryRelatedList(symbol, limit);
+            return TypeAdapter.Adapt<SummaryRootEntity, SummaryViewModel>(entity);
+        }
     }
 }

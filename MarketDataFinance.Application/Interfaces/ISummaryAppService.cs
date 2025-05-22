@@ -11,5 +11,7 @@ namespace MarketDataFinance.Application.Interfaces
     {
 
         Task<SummaryViewModel> SearchMarketSummary(string symbol);
+
+        Task<SummaryViewModel> SearchMarketSummaryRelatedList(string symbol, int limit);
     }
 }
