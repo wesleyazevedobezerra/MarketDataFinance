@@ -29,16 +29,16 @@ namespace MarketDataFinance.Controllers
         [HttpGet("crypto")]   //api/MarketData/etf
         public async Task<IActionResult> GetCrypto()
         {
-            RootViewModel model = await _dataAppServices.SearchMarketETF();
+            RootViewModel model = await _dataAppServices.SearchMarketCrypto();
 
             return Ok(model);
         }
 
 
-        [HttpGet("overview")]   //api/MarketData/etf
+        [HttpGet("overview")]   //api/MarketData/overview
         public async Task<IActionResult> GetOverView()
         {
-            RootViewModel model = await _dataAppServices.SearchMarketETF();
+            RootViewModel model = await _dataAppServices.SearchMarketOverview();
 
             return Ok(model);
         }
