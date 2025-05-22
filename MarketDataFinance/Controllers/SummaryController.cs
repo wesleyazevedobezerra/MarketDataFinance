@@ -19,12 +19,19 @@ namespace MarketDataFinance.Controllers
 
 
         // GET api/<SummaryController>/5
-        [HttpGet]
-        public async Task<IActionResult> Get([FromQuery] string symbol)
+        
+        [HttpGet("option-price")]
+        public async Task<IActionResult> GetOptionPrice([FromQuery] string symbol)
         {
             return Ok(await _summaryAppService.SearchMarketSummary(symbol));
         }
 
-       
+        [HttpGet("related-list")]
+        public async Task<IActionResult> GetRelatedList([FromQuery] string symbol, [FromQuery] int limit)
+        {
+            return Ok(await _summaryAppService.SearchMarketSummary(symbol));
+        }
+
+
     }
 }
