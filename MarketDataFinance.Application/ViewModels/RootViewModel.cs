@@ -6,5 +6,11 @@ using System.Threading.Tasks;
 
 namespace MarketDataFinance.Application.ViewModels
 {
-    public class RootViewModel(DataViewModel Data, string Message, bool Success, int Code);
+    public class RootViewModel
+    {
+        public DataViewModel Data { get; set; }
+        public string Message { get; set; }
+        public bool Success { get; set; }
+        public int Code { get; set; }
+    }
 }

@@ -10,6 +10,8 @@ namespace MarketDataFinance.Application.Interfaces
 {
     public interface IDataAppServices
     {
-        Task<DataViewModel> SearchMarketETF();
+        Task<RootViewModel> SearchMarketETF();
+
+        Task<DataViewModel> SearchMarketCrypto();
     }
 }

@@ -1,4 +1,4 @@
-﻿using MarketDataFinance.Application.Factories;
+﻿using FastMapper.NetCore;
 using MarketDataFinance.Application.Interfaces;
 using MarketDataFinance.Application.ViewModels;
 using MarketDataFinance.Domain.Entities;
@@ -13,15 +13,22 @@ namespace MarketDataFinance.Application.Services
 {
     public class DataAppServices : IDataAppServices
     {
-        private readonly  MarketDataFinance.Domain.Contracts.Adapters.IDataAdapter _dataAdapter;
-        public DataAppServices(MarketDataFinance.Domain.Contracts.Adapters.IDataAdapter dataAdapter)
+        private readonly  MarketDataFinance.Domain.Contracts.Adapters.IAdapterData _dataAdapter;
+        public DataAppServices(MarketDataFinance.Domain.Contracts.Adapters.IAdapterData dataAdapter)
         {
             _dataAdapter = dataAdapter;
         }
-        public async Task<DataViewModel> SearchMarketETF()
+
+        public async Task<DataViewModel> SearchMarketCrypto()
+        {
+            var entity = await _dataAdapter.SearchMarketCrypto();
+            return TypeAdapter.Adapt<DataEntity, DataViewModel>(entity);
+        }
+
+        public async Task<RootViewModel> SearchMarketETF()
         {
             var entity = await _dataAdapter.SearchMarketETF();
-            return DataFactory.CreateDataFactory(entity);
+            return TypeAdapter.Adapt<RootEntity ,RootViewModel > (entity);
         }
     }
 }

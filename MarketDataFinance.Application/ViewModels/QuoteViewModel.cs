@@ -6,5 +6,87 @@ using System.Threading.Tasks;
 
 namespace MarketDataFinance.Application.ViewModels
 {
-    public class QuoteViewModel(string MarketState, string Exchange, double FiftyTwoWeekHighChange, string CustomPriceAlertConfidence, int AverageDailyVolume10Day, string ShortName, bool Triggerable, double AnnualReturnNavY3, object FirstTradeDateMilliseconds, string Language, int ExchangeDataDelayedBy, bool CryptoTradeable, string ExchangeTimezoneShortName, string ExchangeTimezoneName, double TwoHundredDayAverage, double RegularMarketChange, double RegularMarketOpen, int BidSize, double Bid, double TwoHundredDayAverageChangePercent, double RegularMarketDayHigh, double Ask, double NetExpenseRatio, int RegularMarketTime, double FiftyTwoWeekLow, bool HasPrePostMarketData, string MessageBoardId, string LongName, double TrailingThreeMonthReturns, double AnnualReturnNavY5, double RegularMarketPrice, string QuoteSourceName, double RegularMarketChangePercent, double RegularMarketDayLow, bool Tradeable, string FullExchangeName, double RegularMarketPreviousClose, string Symbol, int RegularMarketVolume, double YtdReturn, string Market, double FiftyDayAverage, string Currency, double FiftyDayAverageChangePercent, double FiftyTwoWeekChangePercent, double FiftyDayAverageChange, int GmtOffSetMilliseconds, double DividendYield, int PriceHint, int AskSize, string TypeDisp, int AverageDailyVolume3Month, string QuoteType, string RegularMarketDayRange, double FiftyTwoWeekHighChangePercent, double FiftyTwoWeekLowChange, int SourceInterval, double FiftyTwoWeekLowChangePercent, string Region, string FiftyTwoWeekRange, CorporateActionsViewModel CorporateActions, double TrailingThreeMonthNavReturns, double TwoHundredDayAverageChange, double FiftyTwoWeekHigh, long NetAssets, bool EsgPopulated, int TrailingAnnualDividendYield, int TrailingAnnualDividendRate, int DividendDate, double EpsTrailingTwelveMonths, double TrailingPE, double YieldTTM, double PeTTM, string DisplayName, int EarningsTimestampStart, int EarningsTimestamp, int EarningsTimestampEnd, int EarningsCallTimestampStart, int EarningsCallTimestampEnd, bool IsEarningsDateEstimate);
+    public class QuoteViewModel
+    {
+        public string MarketState { get; set; }
+        public string Exchange { get; set; }
+        public double FiftyTwoWeekHighChange { get; set; }
+        public string CustomPriceAlertConfidence { get; set; }
+        public int AverageDailyVolume10Day { get; set; }
+        public string ShortName { get; set; }
+        public bool Triggerable { get; set; }
+        public double AnnualReturnNavY3 { get; set; }
+        public object FirstTradeDateMilliseconds { get; set; }
+        public string Language { get; set; }
+        public int ExchangeDataDelayedBy { get; set; }
+        public bool CryptoTradeable { get; set; }
+        public string ExchangeTimezoneShortName { get; set; }
+        public string ExchangeTimezoneName { get; set; }
+        public double TwoHundredDayAverage { get; set; }
+        public double RegularMarketChange { get; set; }
+        public double RegularMarketOpen { get; set; }
+        public int BidSize { get; set; }
+        public double Bid { get; set; }
+        public double TwoHundredDayAverageChangePercent { get; set; }
+        public double RegularMarketDayHigh { get; set; }
+        public double Ask { get; set; }
+        public double NetExpenseRatio { get; set; }
+        public int RegularMarketTime { get; set; }
+        public double FiftyTwoWeekLow { get; set; }
+        public bool HasPrePostMarketData { get; set; }
+        public string MessageBoardId { get; set; }
+        public string LongName { get; set; }
+        public double TrailingThreeMonthReturns { get; set; }
+        public double AnnualReturnNavY5 { get; set; }
+        public double RegularMarketPrice { get; set; }
+        public string QuoteSourceName { get; set; }
+        public double RegularMarketChangePercent { get; set; }
+        public double RegularMarketDayLow { get; set; }
+        public bool Tradeable { get; set; }
+        public string FullExchangeName { get; set; }
+        public double RegularMarketPreviousClose { get; set; }
+        public string Symbol { get; set; }
+        public int RegularMarketVolume { get; set; }
+        public double YtdReturn { get; set; }
+        public string Market { get; set; }
+        public double FiftyDayAverage { get; set; }
+        public string Currency { get; set; }
+        public double FiftyDayAverageChangePercent { get; set; }
+        public double FiftyTwoWeekChangePercent { get; set; }
+        public double FiftyDayAverageChange { get; set; }
+        public int GmtOffSetMilliseconds { get; set; }
+        public double DividendYield { get; set; }
+        public int PriceHint { get; set; }
+        public int AskSize { get; set; }
+        public string TypeDisp { get; set; }
+        public int AverageDailyVolume3Month { get; set; }
+        public string QuoteType { get; set; }
+        public string RegularMarketDayRange { get; set; }
+        public double FiftyTwoWeekHighChangePercent { get; set; }
+        public double FiftyTwoWeekLowChange { get; set; }
+        public int SourceInterval { get; set; }
+        public double FiftyTwoWeekLowChangePercent { get; set; }
+        public string Region { get; set; }
+        public string FiftyTwoWeekRange { get; set; }
+        public CorporateActionsViewModel CorporateActions { get; set; }
+        public double TrailingThreeMonthNavReturns { get; set; }
+        public double TwoHundredDayAverageChange { get; set; }
+        public double FiftyTwoWeekHigh { get; set; }
+        public long NetAssets { get; set; }
+        public bool EsgPopulated { get; set; }
+        public int TrailingAnnualDividendYield { get; set; }
+        public int TrailingAnnualDividendRate { get; set; }
+        public int DividendDate { get; set; }
+        public double EpsTrailingTwelveMonths { get; set; }
+        public double TrailingPE { get; set; }
+        public double YieldTTM { get; set; }
+        public double PeTTM { get; set; }
+        public string DisplayName { get; set; }
+        public int EarningsTimestampStart { get; set; }
+        public int EarningsTimestamp { get; set; }
+        public int EarningsTimestampEnd { get; set; }
+        public int EarningsCallTimestampStart { get; set; }
+        public int EarningsCallTimestampEnd { get; set; }
+        public bool IsEarningsDateEstimate { get; set; }
+    }
 }

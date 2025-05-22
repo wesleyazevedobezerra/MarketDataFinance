@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MarketDataFinance.Adapter\MarketDataFinance.Adapter.csproj" />
     <ProjectReference Include="..\MarketDataFinance.Application\MarketDataFinance.Application.csproj" />
   </ItemGroup>
 

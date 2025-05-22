@@ -1,0 +1,56 @@
+﻿using MarketDataFinance.Domain.Contracts.Adapters;
+using MarketDataFinance.Domain.Entities;
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Runtime.ConstrainedExecution;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MarketDataFinance.Adapter
+{
+    public class AdapterData : IAdapterData
+    {
+        public async Task<DataEntity> SearchMarketCrypto()
+        {
+            using (HttpClient http = new HttpClient())
+            {
+                var response = await http.GetAsync($"https://yahoo-finance-api-data.p.rapidapi.com/market/etf?screenerId=COMMODITY_ETFS&region=us&offset=0&limit=0");
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseBody = await response.Content.ReadAsStringAsync();
+                    DataEntity? entity = JsonConvert.DeserializeObject<DataEntity>(responseBody);
+                    if (entity != null)
+                        return entity;
+                    else
+                        return new DataEntity();
+                }
+                return new DataEntity();
+            }
+        }
+
+        public async Task<RootEntity> SearchMarketETF()
+        {
+            using (HttpClient http = new HttpClient())
+            {
+                http.DefaultRequestHeaders.Add("x-rapidapi-host", "yahoo-finance-api-data.p.rapidapi.com");
+                http.DefaultRequestHeaders.Add("x-rapidapi-key", "5f7cb7d7eemshfead8b6141e8079p16ce7cjsne53484c89fd4");
+                var response = await http.GetAsync($"https://yahoo-finance-api-data.p.rapidapi.com/market/etf?screenerId=COMMODITY_ETFS&region=us&offset=0&limit=0");
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseBody = await response.Content.ReadAsStringAsync();
+                    RootEntity? entity = JsonConvert.DeserializeObject<RootEntity>(responseBody);
+                    if (entity != null)
+                        return entity;
+                    else
+                        return new RootEntity();
+                }
+                return new RootEntity();
+            }
+        }
+    }
+}
+
+

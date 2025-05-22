@@ -6,5 +6,15 @@ using System.Threading.Tasks;
 
 namespace MarketDataFinance.Application.ViewModels
 {
-    internal class CriteriaMetaViewModel(string SortField, int Size, string TopOperator, List<string> IncludeFields, string SortType, string QuoteType, int Offset, List<CriterionViewModel> Criteria);
+    public class CriteriaMetaViewModel
+    {
+        public string SortField { get; set; }
+        public int Size { get; set; }
+        public string TopOperator { get; set; }
+        public List<string> IncludeFields { get; set; }
+        public string SortType { get; set; }
+        public string QuoteType { get; set; }
+        public int Offset { get; set; }
+        public List<CriteriaMetaViewModel> Criteria { get; set; }
+    }
 }

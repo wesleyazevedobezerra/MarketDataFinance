@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace MarketDataFinance.Domain.Contracts.Adapters
 {
-    public interface IDataAdapter
+    public interface IAdapterData
     {
-        Task<DataEntity> SearchMarketETF();
+        Task<RootEntity> SearchMarketETF();
+        Task<DataEntity> SearchMarketCrypto();
     }
 }

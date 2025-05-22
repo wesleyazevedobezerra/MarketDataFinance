@@ -11,15 +11,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include=".github\workflows\sonar.yml" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\MarketDataFinance.Application\MarketDataFinance.Application.csproj" />
+    <ProjectReference Include="..\MarketDataFinance.Infrastructure.CrossCutting\MarketDataFinance.Infrastructure.CrossCutting.csproj" />
   </ItemGroup>
 
 </Project>
