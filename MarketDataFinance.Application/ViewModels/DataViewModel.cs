@@ -43,4 +43,19 @@ namespace MarketDataFinance.Application.ViewModels
         public DataViewModel Data { get; set; }
         public ModuleViewModel Module { get; set; }
     }
+
+    
+     public class DataNewsViewModel
+    {
+        public PartnerDataViewModel PartnerData { get; set; }
+        public string ContentType { get; set; }
+        public ContentViewModel Content { get; set; }
+        public string Type { get; set; }
+        public string Id { get; set; }
+    }
+
+    public class DataNewsListViewModel
+    {
+        public MainNewsViewModel Main { get; set; }
+    }
 }

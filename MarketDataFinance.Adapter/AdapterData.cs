@@ -178,6 +178,65 @@ namespace MarketDataFinance.Adapter
                 return new SearchNewsRootEntity();
             }
         }
+        public async Task<RootNewsEntity> SearchMarketNewsDetail()
+        {
+            using (HttpClient http = new HttpClient())
+            {
+                http.DefaultRequestHeaders.Add("x-rapidapi-host", "yahoo-finance-api-data.p.rapidapi.com");
+                http.DefaultRequestHeaders.Add("x-rapidapi-key", "5f7cb7d7eemshfead8b6141e8079p16ce7cjsne53484c89fd4");
+                var response = await http.GetAsync($"https://yahoo-finance-api-data.p.rapidapi.com/news/detail?id=4cd7395e-588c-4a64-a33b-64371b30dc95");
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseBody = await response.Content.ReadAsStringAsync();
+                    RootNewsEntity? entity = JsonConvert.DeserializeObject<RootNewsEntity>(responseBody);
+                    if (entity != null)
+                        return entity;
+                    else
+                        return new RootNewsEntity();
+                }
+                return new RootNewsEntity();
+            }
+        }
+
+        public async Task<RootNewsHotEntity> SearchMarketNewsHot(int limit)
+        {
+            using (HttpClient http = new HttpClient())
+            {
+                http.DefaultRequestHeaders.Add("x-rapidapi-host", "yahoo-finance-api-data.p.rapidapi.com");
+                http.DefaultRequestHeaders.Add("x-rapidapi-key", "5f7cb7d7eemshfead8b6141e8079p16ce7cjsne53484c89fd4");
+                var response = await http.GetAsync($"https://yahoo-finance-api-data.p.rapidapi.com/news/hot-news?limit={limit}");
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseBody = await response.Content.ReadAsStringAsync();
+                    RootNewsHotEntity? entity = JsonConvert.DeserializeObject<RootNewsHotEntity>(responseBody);
+                    if (entity != null)
+                        return entity;
+                    else
+                        return new RootNewsHotEntity();
+                }
+                return new RootNewsHotEntity();
+            }
+        }
+
+        public async Task<RootNewsListEntity> SearchMarketNewsList(int limit)
+        {
+            using (HttpClient http = new HttpClient())
+            {
+                http.DefaultRequestHeaders.Add("x-rapidapi-host", "yahoo-finance-api-data.p.rapidapi.com");
+                http.DefaultRequestHeaders.Add("x-rapidapi-key", "5f7cb7d7eemshfead8b6141e8079p16ce7cjsne53484c89fd4");
+                var response = await http.GetAsync($"https://yahoo-finance-api-data.p.rapidapi.com/news/hot-news?limit={limit}");
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseBody = await response.Content.ReadAsStringAsync();
+                    RootNewsListEntity? entity = JsonConvert.DeserializeObject<RootNewsListEntity>(responseBody);
+                    if (entity != null)
+                        return entity;
+                    else
+                        return new RootNewsListEntity();
+                }
+                return new RootNewsListEntity();
+            }
+        }
     }
 }
 

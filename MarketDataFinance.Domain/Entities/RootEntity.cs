@@ -22,4 +22,27 @@ namespace MarketDataFinance.Domain.Entities
         public bool Success { get; set; }
         public int Code { get; set; }
     }
+
+    public class RootNewsEntity
+    {
+        public List<DataNews> Data { get; set; }
+        public string Message { get; set; }
+        public bool Success { get; set; }
+        public int Code { get; set; }
+    }
+    public class RootNewsHotEntity
+    {
+        public List<DatumNewsEntity> Data { get; set; }
+        public string Message { get; set; }
+        public bool Success { get; set; }
+        public int Code { get; set; }
+    }
+
+    public class RootNewsListEntity
+    {
+        public List<DatumNewsEntity> Data { get; set; }
+        public string Message { get; set; }
+        public bool Success { get; set; }
+        public int Code { get; set; }
+    }
 }

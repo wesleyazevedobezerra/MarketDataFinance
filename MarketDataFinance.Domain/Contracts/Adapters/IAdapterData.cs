@@ -11,7 +11,6 @@ namespace MarketDataFinance.Domain.Contracts.Adapters
     {
         Task<RootEntity> SearchMarketETF();
         Task<RootEntity> SearchMarketCrypto();
-
         Task<SummaryRootEntity> SearchMarketSummary(string symbol);
         Task<RootEntity> SearchMarketOverview();
 
@@ -22,5 +21,9 @@ namespace MarketDataFinance.Domain.Contracts.Adapters
         Task<ChartRootEntity> SearchChartAdvanced(string symbol, int limit, string from, string to, string range);
 
         Task<SearchNewsRootEntity> SearchNews(string keyword, int limit);
+
+        Task<RootNewsEntity> SearchMarketNewsDetail();
+        Task<RootNewsHotEntity> SearchMarketNewsHot(int limit);
+        Task<RootNewsListEntity> SearchMarketNewsList(int limit);
     }
 }

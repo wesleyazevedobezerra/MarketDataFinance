@@ -16,7 +16,8 @@ namespace MarketDataFinance.Infrastructure.CrossCutting.Bootstrap
             services.AddScoped<IChartAppService, ChartAppService>();
             services.AddScoped<ISearchNewsAppService, SearchNewsAppService>();
             services.AddScoped<IAdapterData, AdapterData>();
-           
+            services.AddScoped<INewsAppService, NewsAppService>();
+
         }
     }
 }

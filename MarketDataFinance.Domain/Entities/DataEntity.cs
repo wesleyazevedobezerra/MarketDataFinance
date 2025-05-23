@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -61,6 +62,44 @@ namespace MarketDataFinance.Domain.Entities
     //public class StrikesEntity
     //{
     //}
-    
 
+
+    public class DataNews
+    {
+        public PartnerDataEntity PartnerData { get; set; }
+        public string ContentType { get; set; }
+        public ContentEntity Content { get; set; }
+        public string Type { get; set; }
+        public string Id { get; set; }
+    }
+
+    public class DatumNewsEntity
+    {
+        public List<string> Tickers { get; set; }
+        public string ThumbSmall { get; set; }
+        public string FollowersType { get; set; }
+        public string HostedType { get; set; }
+        public string ThumbMedium { get; set; }
+        public string ArticleUrl { get; set; }
+        public string NotificationType { get; set; }
+        public string ContentType { get; set; }
+        public object PublishTs { get; set; }
+        public string Region { get; set; }
+        public string Lang { get; set; }
+        public MetaNewsEntity Meta { get; set; }
+        public string ContentId { get; set; }
+        public string Cta { get; set; }
+        public string Title { get; set; }
+        public string Status { get; set; }
+        public string Content { get; set; }
+        public string NotificationTitle { get; set; }
+        public int Score { get; set; }
+        public string Body { get; set; }
+        public string Type { get; set; }
+    }
+
+    public class DataNewsListEntity
+    {
+        public MainNewsEntity Main { get; set; }
+    }
 }

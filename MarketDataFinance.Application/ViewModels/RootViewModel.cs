@@ -17,13 +17,13 @@ namespace MarketDataFinance.Application.ViewModels
 
     public class SummaryViewModel
     {
-        public List<DatumViewModel> Data { get; set; }
+        public List<SummaryDatumViewModel> Data { get; set; }
         public string Message { get; set; }
         public bool Success { get; set; }
         public int Code { get; set; }
     }
 
-    public class DatumViewModel
+    public class SummaryDatumViewModel
     {
         public string underlyingSymbol { get; set; }
         public QuoteViewModel quote { get; set; }
@@ -38,5 +38,27 @@ namespace MarketDataFinance.Application.ViewModels
     public class StrikesViewModel
     {
     }
-    
+
+    public class RootNewsViewModel
+    {
+        public List<DataNewsViewModel> Data { get; set; }
+        public string Message { get; set; }
+        public bool Success { get; set; }
+        public int Code { get; set; }
+    }
+    public class RootNewsHotViewModel
+    {
+        public List<DatumNewsViewModel> Data { get; set; }
+        public string Message { get; set; }
+        public bool Success { get; set; }
+        public int Code { get; set; }
+    }
+
+    public class RootNewsListViewModel
+    {
+        public List<DatumNewsViewModel> Data { get; set; }
+        public string Message { get; set; }
+        public bool Success { get; set; }
+        public int Code { get; set; }
+    }
 }

@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MarketDataFinance.Domain.Entities
+{
+    public class ImageEntity
+    {
+        public List<ResolutionEntity> Resolutions { get; set; }
+        public int OriginalHeight { get; set; }
+        public string OriginalUrl { get; set; }
+        public int OriginalWidth { get; set; }
+    }
+}

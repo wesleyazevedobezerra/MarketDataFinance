@@ -13,4 +13,10 @@ namespace MarketDataFinance.Domain.Entities
         public DataEntity Data { get; set; }
         public MetaEntity Meta { get; set; }
     }
+    public class MainNewsEntity
+    {
+        public bool NextPage { get; set; }
+        public PaginationEntity Pagination { get; set; }
+        public List<StreamEntity> Stream { get; set; }
+    }
 }
