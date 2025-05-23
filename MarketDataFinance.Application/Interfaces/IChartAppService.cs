@@ -13,5 +13,7 @@ namespace MarketDataFinance.Application.Interfaces
         Task<ChartRootViewModel> SearchChart(string symbol, int limit, string range);
 
         Task<ChartRootViewModel> SearchChartAdvanced(string symbol, int limit, string from, string to, string range);
+
+
     }
 }
