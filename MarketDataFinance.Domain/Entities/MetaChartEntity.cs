@@ -9,7 +9,7 @@ namespace MarketDataFinance.Domain.Entities
     public class MetaChartEntity
     {
         public int regularMarketTime { get; set; }
-        public int fiftyTwoWeekLow { get; set; }
+        public double fiftyTwoWeekLow { get; set; }
         public bool hasPrePostMarketData { get; set; }
         public string range { get; set; }
         public List<string> validRanges { get; set; }
@@ -33,7 +33,7 @@ namespace MarketDataFinance.Domain.Entities
         public string symbol { get; set; }
         public double regularMarketDayHigh { get; set; }
         public int gmtoffset { get; set; }
-        public int fiftyTwoWeekHigh { get; set; }
+        public double fiftyTwoWeekHigh { get; set; }
         public string fullExchangeName { get; set; }
     }
 }

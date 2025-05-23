@@ -18,5 +18,7 @@ namespace MarketDataFinance.Domain.Contracts.Adapters
         Task<SummaryRootEntity> SearchMarketSummaryRelatedList(string symbol,int limit);
 
         Task<ChartRootEntity> SearchChart(string symbol, int limit, string range);
+
+        Task<ChartRootEntity> SearchChartAdvanced(string symbol, int limit, string from, string to, string range);
     }
 }

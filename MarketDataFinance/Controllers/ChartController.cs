@@ -21,10 +21,22 @@ namespace MarketDataFinance.Controllers
 
 
 
-        [HttpGet]
-        public async Task<IActionResult> Get([FromQuery] string symbol, [FromQuery] int limit, [FromQuery] string range)
+        [HttpGet("simple-chart")]
+        public async Task<IActionResult> GetSimpleChart([FromQuery] string symbol, 
+                                                        [FromQuery] int limit, 
+                                                        [FromQuery] string range)
         {
             return Ok(await _chartAppServices.SearchChart(symbol, limit, range));
+        }
+
+        [HttpGet("advanced-chart")]
+        public async Task<IActionResult> GetAdvancedChart([FromQuery] string symbol, 
+                                                          [FromQuery] int limit, 
+                                                          [FromQuery] string from, 
+                                                          [FromQuery] string to, 
+                                                          [FromQuery] string range)
+        {
+            return Ok(await _chartAppServices.SearchChartAdvanced(symbol, limit, from, to, range));
         }
 
 

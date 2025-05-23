@@ -135,6 +135,28 @@ namespace MarketDataFinance.Adapter
                 return new ChartRootEntity();
             }
         }
+
+
+        public async Task<ChartRootEntity> SearchChartAdvanced(string symbol, int limit, string from, string to, string range)
+        {
+            using (HttpClient http = new HttpClient())
+            {
+                http.DefaultRequestHeaders.Add("x-rapidapi-host", "yahoo-finance-api-data.p.rapidapi.com");
+                http.DefaultRequestHeaders.Add("x-rapidapi-key", "5f7cb7d7eemshfead8b6141e8079p16ce7cjsne53484c89fd4");
+                string url = $"https://yahoo-finance-api-data.p.rapidapi.com/chart/advanced-chart?symbol={symbol}&limit={limit}&from={from}&to={to}&range={range}";
+                var response = await http.GetAsync(url);
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseBody = await response.Content.ReadAsStringAsync();
+                    ChartRootEntity? entity = JsonConvert.DeserializeObject<ChartRootEntity>(responseBody);
+                    if (entity != null)
+                        return entity;
+                    else
+                        return new ChartRootEntity();
+                }
+                return new ChartRootEntity();
+            }
+        }
     }
 }
 

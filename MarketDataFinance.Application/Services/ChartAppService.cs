@@ -24,5 +24,11 @@ namespace MarketDataFinance.Application.Services
             var entity = await _dataAdapter.SearchChart(symbol, limit, range);
             return TypeAdapter.Adapt<ChartRootEntity, ChartRootViewModel>(entity);
         }
+
+        public async Task<ChartRootViewModel> SearchChartAdvanced(string symbol, int limit, string from, string to, string range)
+        {
+            var entity = await _dataAdapter.SearchChartAdvanced(symbol, limit, from,to, range);
+            return TypeAdapter.Adapt<ChartRootEntity, ChartRootViewModel>(entity);
+        }
     }
 }
