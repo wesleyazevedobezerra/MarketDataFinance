@@ -13,8 +13,9 @@ namespace MarketDataFinance.Infrastructure.CrossCutting.Bootstrap
         {
             services.AddScoped<IDataAppServices, DataAppServices>();
             services.AddScoped<ISummaryAppService, SummaryAppService>();
+            services.AddScoped<IChartAppService, ChartAppService>();
             services.AddScoped<IAdapterData, AdapterData>();
-
+           
         }
     }
 }
