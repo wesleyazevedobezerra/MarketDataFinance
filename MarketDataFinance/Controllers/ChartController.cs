@@ -18,9 +18,6 @@ namespace MarketDataFinance.Controllers
         }
 
 
-
-
-
         [HttpGet("simple-chart")]
         public async Task<IActionResult> GetSimpleChart([FromQuery] string symbol, 
                                                         [FromQuery] int limit, 
@@ -38,7 +35,6 @@ namespace MarketDataFinance.Controllers
         {
             return Ok(await _chartAppServices.SearchChartAdvanced(symbol, limit, from, to, range));
         }
-
 
     }
 }
