@@ -8,7 +8,7 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class StructuredSummaryViewModel
     {
-        public List<SummaryNewsViewModel> Summaries { get; set; }
-        public string Source { get; set; }
+        public List<SummaryNewsViewModel>? Summaries { get; set; }
+        public string? Source { get; set; }
     }
 }

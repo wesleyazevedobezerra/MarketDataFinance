@@ -9,6 +9,6 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class IndicatorsChartEntity
     {
-        public List<QuoteChartEntity> quote { get; set; }
+        public List<QuoteChartEntity>? quote { get; set; }
     }
 }

@@ -8,6 +8,6 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class AudioEntity
     {
-        public string Id { get; set; }
+        public string? Id { get; set; }
     }
 }

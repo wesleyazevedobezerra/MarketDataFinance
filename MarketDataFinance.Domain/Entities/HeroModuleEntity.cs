@@ -8,8 +8,8 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class HeroModuleEntity
     {
-        public string HeadlinePosition { get; set; }
-        public string Type { get; set; }
+        public string? HeadlinePosition { get; set; }
+        public string? Type { get; set; }
         public bool DarkBackground { get; set; }
     }
 }

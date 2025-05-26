@@ -8,16 +8,16 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class CurrentTradingPeriodChartEntity
     {
-        public PreChartEntity pre { get; set; }
-        public PostChartEntity post { get; set; }
-        public RegularChartEntity regular { get; set; }
+        public PreChartEntity? pre { get; set; }
+        public PostChartEntity? post { get; set; }
+        public RegularChartEntity? regular { get; set; }
     }
 
     public class PostChartEntity
     {
         public int end { get; set; }
         public int gmtoffset { get; set; }
-        public string timezone { get; set; }
+        public string? timezone { get; set; }
         public int start { get; set; }
     }
 
@@ -25,7 +25,7 @@ namespace MarketDataFinance.Domain.Entities
     {
         public int end { get; set; }
         public int gmtoffset { get; set; }
-        public string timezone { get; set; }
+        public string? timezone { get; set; }
         public int start { get; set; }
     }
 
@@ -35,7 +35,7 @@ namespace MarketDataFinance.Domain.Entities
     {
         public int end { get; set; }
         public int gmtoffset { get; set; }
-        public string timezone { get; set; }
+        public string? timezone { get; set; }
         public int start { get; set; }
     }
 }

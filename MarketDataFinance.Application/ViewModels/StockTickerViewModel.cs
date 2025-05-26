@@ -8,6 +8,6 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class StockTickerViewModel
     {
-        public string Symbol { get; set; }
+        public string? Symbol { get; set; }
     }
 }

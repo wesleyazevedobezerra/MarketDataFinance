@@ -10,6 +10,6 @@ namespace MarketDataFinance.Application.ViewModels
     public class IndicatorsChartViewModel
     {
 
-        public List<QuoteChartViewModel> quote { get; set; }
+        public List<QuoteChartViewModel>? quote { get; set; }
     }
 }

@@ -8,8 +8,8 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class SearchNewsRootEntity
     {
-        public List<DatumSearchNewsEntity> data { get; set; }
-        public string message { get; set; }
+        public List<DatumSearchNewsEntity>? data { get; set; }
+        public string? message { get; set; }
         public bool success { get; set; }
         public int code { get; set; }
     }

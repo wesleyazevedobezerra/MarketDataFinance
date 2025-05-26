@@ -8,7 +8,7 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class RegionsViewModel
     {
-        public MainViewModel Main { get; set; }
-        public HeaderViewModel Header { get; set; }
+        public MainViewModel? Main { get; set; }
+        public HeaderViewModel? Header { get; set; }
     }
 }

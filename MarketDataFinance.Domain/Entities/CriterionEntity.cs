@@ -9,8 +9,8 @@ namespace MarketDataFinance.Domain.Entities
     public class CriterionEntity
     {
       //  public List<int> LabelsSelected { get; set; }
-        public object SubField { get; set; }
-        public string Field { get; set; }
+        public object? SubField { get; set; }
+        public string? Field { get; set; }
         //public DependentValuesEntity DependentValues { get; set; }
         //public List<string> Operators { get; set; }
         //public ValuesEntity Values { get; set; }

@@ -8,6 +8,6 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class Module2ViewModel
     {
-        public string ModuleId { get; set; }
+        public string? ModuleId { get; set; }
     }
 }

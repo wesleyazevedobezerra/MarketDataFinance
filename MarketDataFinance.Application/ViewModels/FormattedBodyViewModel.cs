@@ -9,7 +9,7 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class FormattedBodyViewModel
     {
-        public FormattingViewModel Formatting { get; set; }
-        public string Text { get; set; }
+        public FormattingViewModel? Formatting { get; set; }
+        public string? Text { get; set; }
     }
 }

@@ -8,6 +8,6 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class StockTickerEntity
     {
-        public string Symbol { get; set; }
+        public string? Symbol { get; set; }
     }
 }

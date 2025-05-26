@@ -8,7 +8,7 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class CategoryViewModel
     {
-        public string LocalizedTitle { get; set; }
-        public string Id { get; set; }
+        public string? LocalizedTitle { get; set; }
+        public string? Id { get; set; }
     }
 }

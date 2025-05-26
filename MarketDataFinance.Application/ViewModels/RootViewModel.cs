@@ -9,27 +9,27 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class RootViewModel
     {
-        public DataViewModel Data { get; set; }
-        public string Message { get; set; }
+        public DataViewModel? Data { get; set; }
+        public string? Message { get; set; }
         public bool Success { get; set; }
         public int Code { get; set; }
     }
 
     public class SummaryViewModel
     {
-        public List<SummaryDatumViewModel> Data { get; set; }
-        public string Message { get; set; }
+        public List<SummaryDatumViewModel>? Data { get; set; }
+        public string? Message { get; set; }
         public bool Success { get; set; }
         public int Code { get; set; }
     }
 
     public class SummaryDatumViewModel
     {
-        public string underlyingSymbol { get; set; }
-        public QuoteViewModel quote { get; set; }
+        public string? underlyingSymbol { get; set; }
+        public QuoteViewModel? quote { get; set; }
         public bool hasMiniOptions { get; set; }
-        public ExpirationDatesViewModel expirationDates { get; set; }
-        public StrikesViewModel strikes { get; set; }
+        public ExpirationDatesViewModel? expirationDates { get; set; }
+        public StrikesViewModel? strikes { get; set; }
     }
 
     public class ExpirationDatesViewModel
@@ -41,23 +41,23 @@ namespace MarketDataFinance.Application.ViewModels
 
     public class RootNewsViewModel
     {
-        public List<DataNewsViewModel> Data { get; set; }
-        public string Message { get; set; }
+        public List<DataNewsViewModel>? Data { get; set; }
+        public string? Message { get; set; }
         public bool Success { get; set; }
         public int Code { get; set; }
     }
     public class RootNewsHotViewModel
     {
-        public List<DatumNewsViewModel> Data { get; set; }
-        public string Message { get; set; }
+        public List<DatumNewsViewModel>? Data { get; set; }
+        public string? Message { get; set; }
         public bool Success { get; set; }
         public int Code { get; set; }
     }
 
     public class RootNewsListViewModel
     {
-        public List<DatumNewsViewModel> Data { get; set; }
-        public string Message { get; set; }
+        public List<DatumNewsViewModel>? Data { get; set; }
+        public string? Message { get; set; }
         public bool Success { get; set; }
         public int Code { get; set; }
     }

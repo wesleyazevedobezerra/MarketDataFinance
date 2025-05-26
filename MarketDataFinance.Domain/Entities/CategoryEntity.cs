@@ -8,7 +8,7 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class CategoryEntity
     {
-        public string LocalizedTitle { get; set; }
-        public string Id { get; set; }
+        public string? LocalizedTitle { get; set; }
+        public string? Id { get; set; }
     }
 }

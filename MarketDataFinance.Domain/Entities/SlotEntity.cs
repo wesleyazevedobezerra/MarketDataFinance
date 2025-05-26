@@ -9,6 +9,6 @@ namespace MarketDataFinance.Domain.Entities
     public class SlotEntity
     {
         public int InsertIndex { get; set; }
-        public string Id { get; set; }
+        public string? Id { get; set; }
     }
 }

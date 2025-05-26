@@ -8,7 +8,7 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class StructuredSummaryEntity
     {
-        public List<SummaryNewsEntity> Summaries { get; set; }
-        public string Source { get; set; }
+        public List<SummaryNewsEntity>? Summaries { get; set; }
+        public string? Source { get; set; }
     }
 }

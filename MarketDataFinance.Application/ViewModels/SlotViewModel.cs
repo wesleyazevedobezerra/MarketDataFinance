@@ -9,6 +9,6 @@ namespace MarketDataFinance.Application.ViewModels
     public class SlotViewModel
     {
         public int InsertIndex { get; set; }
-        public string Id { get; set; }
+        public string? Id { get; set; }
     }
 }

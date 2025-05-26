@@ -8,9 +8,9 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class Author2ViewModel
     {
-        public string Byline { get; set; }
-        public string DisplayName { get; set; }
-        public ImageViewModel Image { get; set; }
-        public string Description { get; set; }
+        public string? Byline { get; set; }
+        public string? DisplayName { get; set; }
+        public ImageViewModel? Image { get; set; }
+        public string? Description { get; set; }
     }
 }

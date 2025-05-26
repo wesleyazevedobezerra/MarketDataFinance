@@ -9,7 +9,7 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class FormattedBodyEntity
     {
-        public FormattingEntity Formatting { get; set; }
-        public string Text { get; set; }
+        public FormattingEntity? Formatting { get; set; }
+        public string? Text { get; set; }
     }
 }

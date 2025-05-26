@@ -10,9 +10,9 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class BodyEntity
     {
-        public SchemaEntity Schema { get; set; }
-        public string Markup { get; set; }
-        public DataNews Data { get; set; }
-        public ModulesEntity Modules { get; set; }
+        public SchemaEntity? Schema { get; set; }
+        public string? Markup { get; set; }
+        public DataNews? Data { get; set; }
+        public ModulesEntity? Modules { get; set; }
     }
 }

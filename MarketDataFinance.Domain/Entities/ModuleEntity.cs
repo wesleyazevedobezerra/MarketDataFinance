@@ -9,8 +9,8 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class ModuleEntity
     {
-        public string Name { get; set; }
-        public AttsEntity Atts { get; set; }
-        public DataEntity Data { get; set; }
+        public string? Name { get; set; }
+        public AttsEntity? Atts { get; set; }
+        public DataEntity? Data { get; set; }
     }
 }

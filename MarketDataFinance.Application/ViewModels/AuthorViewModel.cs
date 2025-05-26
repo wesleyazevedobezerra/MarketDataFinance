@@ -8,6 +8,6 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class AuthorViewModel
     {
-        public AuthorViewModel Author { get; set; }
+        public AuthorViewModel? Author { get; set; }
     }
 }

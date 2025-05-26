@@ -8,8 +8,8 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class HeroModuleViewModel
     {
-        public string HeadlinePosition { get; set; }
-        public string Type { get; set; }
+        public string? HeadlinePosition { get; set; }
+        public string? Type { get; set; }
         public bool DarkBackground { get; set; }
     }
 }

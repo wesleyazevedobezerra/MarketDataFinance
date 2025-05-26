@@ -8,6 +8,6 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class ThumbnailSearchNewsEntity
     {
-        public List<ResolutionSearchNewsEntity> resolutions { get; set; }
+        public List<ResolutionSearchNewsEntity>? resolutions { get; set; }
     }
 }

@@ -8,9 +8,9 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class ImageEntity
     {
-        public List<ResolutionEntity> Resolutions { get; set; }
+        public List<ResolutionEntity>? Resolutions { get; set; }
         public int OriginalHeight { get; set; }
-        public string OriginalUrl { get; set; }
+        public string? OriginalUrl { get; set; }
         public int OriginalWidth { get; set; }
     }
 }

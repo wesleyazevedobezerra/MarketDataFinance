@@ -9,7 +9,7 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class RegionsEntity
     {
-        public MainEntity Main { get; set; }
-        public HeaderEntity Header { get; set; }
+        public MainEntity? Main { get; set; }
+        public HeaderEntity? Header { get; set; }
     }
 }

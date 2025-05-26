@@ -8,6 +8,6 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class PaginationViewModel
     {
-        public string Uuids { get; set; }
+        public string? Uuids { get; set; }
     }
 }

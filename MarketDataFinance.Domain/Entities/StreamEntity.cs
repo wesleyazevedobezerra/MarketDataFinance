@@ -9,7 +9,7 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class StreamEntity
     {
-        public ContentNewsEntity Content { get; set; }
-        public string Id { get; set; }
+        public ContentNewsEntity? Content { get; set; }
+        public string? Id { get; set; }
     }
 }

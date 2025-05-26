@@ -9,9 +9,9 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class Author2Entity
     {
-        public string Byline { get; set; }
-        public string DisplayName { get; set; }
-        public ImageEntity Image { get; set; }
-        public string Description { get; set; }
+        public string? Byline { get; set; }
+        public string? DisplayName { get; set; }
+        public ImageEntity? Image { get; set; }
+        public string? Description { get; set; }
     }
 }

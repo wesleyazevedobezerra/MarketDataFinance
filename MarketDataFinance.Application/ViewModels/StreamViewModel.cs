@@ -9,7 +9,7 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class StreamViewModel
     {
-        public ContentNewsViewModel Content { get; set; }
-        public string Id { get; set; }
+        public ContentNewsViewModel? Content { get; set; }
+        public string? Id { get; set; }
     }
 }

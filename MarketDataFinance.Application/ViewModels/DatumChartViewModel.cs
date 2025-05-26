@@ -9,8 +9,8 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class DatumChartViewModel
     {
-        public List<int> timestamp { get; set; }
-        public MetaChartViewModel meta { get; set; }
-        public IndicatorsChartViewModel indicators { get; set; }
+        public List<int>? timestamp { get; set; }
+        public MetaChartViewModel? meta { get; set; }
+        public IndicatorsChartViewModel? indicators { get; set; }
     }
 }

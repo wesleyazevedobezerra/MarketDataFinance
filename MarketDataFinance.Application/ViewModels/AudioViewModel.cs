@@ -8,6 +8,6 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class AudioViewModel
     {
-        public string Id { get; set; }
+        public string? Id { get; set; }
     }
 }

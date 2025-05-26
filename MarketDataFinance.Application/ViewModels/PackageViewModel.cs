@@ -8,8 +8,8 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class PackageViewModel
     {
-        public string Name { get; set; }
-        public MetaViewModel Meta { get; set; }
-        public List<ModuleViewModel> Modules { get; set; }
+        public string? Name { get; set; }
+        public MetaViewModel? Meta { get; set; }
+        public List<ModuleViewModel>? Modules { get; set; }
     }
 }

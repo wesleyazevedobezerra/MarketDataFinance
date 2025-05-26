@@ -10,38 +10,38 @@ namespace MarketDataFinance.Domain.Entities
     public class RootEntity
     {
         public DataEntity Data { get; set; }
-        public string Message { get; set; }
+        public string? Message { get; set; }
         public bool Success { get; set; }
         public int Code { get; set; }
     }
 
     public class SummaryRootEntity
     {
-        public List<Datum> Data { get; set; }
-        public string Message { get; set; }
+        public List<Datum>? Data { get; set; }
+        public string? Message { get; set; }
         public bool Success { get; set; }
         public int Code { get; set; }
     }
 
     public class RootNewsEntity
     {
-        public List<DataNews> Data { get; set; }
-        public string Message { get; set; }
+        public List<DataNews>? Data { get; set; }
+        public string? Message { get; set; }
         public bool Success { get; set; }
         public int Code { get; set; }
     }
     public class RootNewsHotEntity
     {
-        public List<DatumNewsEntity> Data { get; set; }
-        public string Message { get; set; }
+        public List<DatumNewsEntity>? Data { get; set; }
+        public string? Message { get; set; }
         public bool Success { get; set; }
         public int Code { get; set; }
     }
 
     public class RootNewsListEntity
     {
-        public List<DatumNewsEntity> Data { get; set; }
-        public string Message { get; set; }
+        public List<DatumNewsEntity>? Data { get; set; }
+        public string? Message { get; set; }
         public bool Success { get; set; }
         public int Code { get; set; }
     }

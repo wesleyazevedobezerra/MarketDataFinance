@@ -8,8 +8,8 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class ResolutionSearchNewsViewModel
     {
-        public string url { get; set; }
-        public string tag { get; set; }
+        public string? url { get; set; }
+        public string? tag { get; set; }
         public int height { get; set; }
         public int width { get; set; }
     }

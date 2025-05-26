@@ -9,6 +9,6 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class ThumbnailSearchNewsViewModel
     {
-        public List<ResolutionSearchNewsViewModel> resolutions { get; set; }
+        public List<ResolutionSearchNewsViewModel>? resolutions { get; set; }
     }
 }

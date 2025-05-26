@@ -9,9 +9,9 @@ namespace MarketDataFinance.Application.ViewModels
     public class CurrentTradingPeriodChartViewModel
     {
 
-        public PreChartViewModel pre { get; set; }
-        public PostChartViewModel post { get; set; }
-        public RegularChartViewModel regular { get; set; }
+        public PreChartViewModel? pre { get; set; }
+        public PostChartViewModel? post { get; set; }
+        public RegularChartViewModel? regular { get; set; }
     }
 
   
@@ -20,7 +20,7 @@ namespace MarketDataFinance.Application.ViewModels
     {
         public int end { get; set; }
         public int gmtoffset { get; set; }
-        public string timezone { get; set; }
+        public string? timezone { get; set; }
         public int start { get; set; }
     }
 
@@ -28,7 +28,7 @@ namespace MarketDataFinance.Application.ViewModels
     {
         public int end { get; set; }
         public int gmtoffset { get; set; }
-        public string timezone { get; set; }
+        public string? timezone { get; set; }
         public int start { get; set; }
     }
 
@@ -38,7 +38,7 @@ namespace MarketDataFinance.Application.ViewModels
     {
         public int end { get; set; }
         public int gmtoffset { get; set; }
-        public string timezone { get; set; }
+        public string? timezone { get; set; }
         public int start { get; set; }
     }
 }

@@ -8,6 +8,6 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class CanonicalUrlViewModel
     {
-        public string Url { get; set; }
+        public string? Url { get; set; }
     }
 }

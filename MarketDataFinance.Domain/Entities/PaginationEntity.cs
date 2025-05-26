@@ -8,6 +8,6 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class PaginationEntity
     {
-        public string Uuids { get; set; }
+        public string? Uuids { get; set; }
     }
 }

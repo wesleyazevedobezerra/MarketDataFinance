@@ -10,8 +10,8 @@ namespace MarketDataFinance.Application.ViewModels
     {
         public string OriginalUrl { get; set; }
         public int OriginalWidth { get; set; }
-        public List<ResolutionViewModel> Resolutions { get; set; }
+        public List<ResolutionViewModel>? Resolutions { get; set; }
         public int OriginalHeight { get; set; }
-        public string Type { get; set; }
+        public string? Type { get; set; }
     }
 }

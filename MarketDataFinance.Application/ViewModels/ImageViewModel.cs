@@ -8,9 +8,9 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class ImageViewModel
     {
-        public List<ResolutionViewModel> Resolutions { get; set; }
+        public List<ResolutionViewModel>? Resolutions { get; set; }
         public int OriginalHeight { get; set; }
-        public string OriginalUrl { get; set; }
+        public string? OriginalUrl { get; set; }
         public int OriginalWidth { get; set; }
     }
 }

@@ -9,8 +9,8 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class HeaderEntity
     {
-        public List<PackageEntity> Packages { get; set; }
-        public DataEntity Data { get; set; }
-        public MetaEntity Meta { get; set; }
+        public List<PackageEntity>? Packages { get; set; }
+        public DataEntity? Data { get; set; }
+        public MetaEntity? Meta { get; set; }
     }
 }

@@ -8,7 +8,7 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class FinanceEntity
     {
-        public PremiumFinanceEntity PremiumFinance { get; set; }
-        public List<StockTickerEntity> StockTickers { get; set; }
+        public PremiumFinanceEntity? PremiumFinance { get; set; }
+        public List<StockTickerEntity>? StockTickers { get; set; }
     }
 }

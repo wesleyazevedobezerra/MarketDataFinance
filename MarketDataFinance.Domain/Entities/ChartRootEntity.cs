@@ -8,9 +8,9 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class ChartRootEntity
     {
-        public List<DatumChartEntity> data { get; set; }
-        public string message { get; set; }
-        public bool success { get; set; }
-        public int code { get; set; }
+        public List<DatumChartEntity>? data { get; set; }
+        public string? message { get; set; }
+        public bool? success { get; set; }
+        public int? code { get; set; }
     }
 }

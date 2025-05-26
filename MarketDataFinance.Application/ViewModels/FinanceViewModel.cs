@@ -9,7 +9,7 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class FinanceViewModel
     {
-        public PremiumFinanceViewModel PremiumFinance { get; set; }
-        public List<StockTickerViewModel> StockTickers { get; set; }
+        public PremiumFinanceViewModel? PremiumFinance { get; set; }
+        public List<StockTickerViewModel>? StockTickers { get; set; }
     }
 }

@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace MarketDataFinance.Infrastructure.CrossCutting.Bootstrap
 {
-    public class NativeBootstrap
+    public static class NativeBootstrap
     {
         public static void serviceLocation(IServiceCollection services)
         {

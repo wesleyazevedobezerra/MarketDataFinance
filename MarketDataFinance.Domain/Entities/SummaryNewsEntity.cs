@@ -8,7 +8,7 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class SummaryNewsEntity
     {
-        public string Value { get; set; }
-        public string Type { get; set; }
+        public string? Value { get; set; }
+        public string? Type { get; set; }
     }
 }

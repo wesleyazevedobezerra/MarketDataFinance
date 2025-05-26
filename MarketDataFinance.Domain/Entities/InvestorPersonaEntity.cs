@@ -8,9 +8,9 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class InvestorPersonaEntity
     {
-        public string LocalizedTitle { get; set; }
-        public string LocalizedDescription { get; set; }
-        public string LocalizedShortTitle { get; set; }
-        public string Id { get; set; }
+        public string? LocalizedTitle { get; set; }
+        public string? LocalizedDescription { get; set; }
+        public string? LocalizedShortTitle { get; set; }
+        public string? Id { get; set; }
     }
 }

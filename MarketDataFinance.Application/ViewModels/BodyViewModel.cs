@@ -8,9 +8,9 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class BodyViewModel
     {
-        public SchemaViewModel Schema { get; set; }
-        public string Markup { get; set; }
-        public DataViewModel Data { get; set; }
-        public ModulesViewModel Modules { get; set; }
+        public SchemaViewModel? Schema { get; set; }
+        public string? Markup { get; set; }
+        public DataViewModel? Data { get; set; }
+        public ModulesViewModel? Modules { get; set; }
     }
 }

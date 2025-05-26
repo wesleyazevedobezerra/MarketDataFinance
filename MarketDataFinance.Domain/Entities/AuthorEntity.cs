@@ -8,6 +8,6 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class AuthorEntity
     {
-        public AuthorEntity Author { get; set; }
+        public AuthorEntity? Author { get; set; }
     }
 }

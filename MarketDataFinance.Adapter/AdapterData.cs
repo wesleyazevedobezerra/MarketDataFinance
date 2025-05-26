@@ -13,12 +13,16 @@ namespace MarketDataFinance.Adapter
 {
     public class AdapterData : IAdapterData
     {
+        private const string RapidApiHostHeader = "x-rapidapi-host";
+        private const string RapidApiHostValue = "yahoo-finance-api-data.p.rapidapi.com";
+        private const string RapidApiKeyHeader = "x-rapidapi-key";
+        private const string RapidApiKeyValue = "5f7cb7d7eemshfead8b6141e8079p16ce7cjsne53484c89fd4";
         public async Task<RootEntity> SearchMarketCrypto()
         {
             using (HttpClient http = new HttpClient())
             {
-                http.DefaultRequestHeaders.Add("x-rapidapi-host", "yahoo-finance-api-data.p.rapidapi.com");
-                http.DefaultRequestHeaders.Add("x-rapidapi-key", "5f7cb7d7eemshfead8b6141e8079p16ce7cjsne53484c89fd4");
+                http.DefaultRequestHeaders.Add(RapidApiHostHeader, RapidApiHostValue);
+                http.DefaultRequestHeaders.Add(RapidApiKeyHeader, RapidApiKeyValue);
 
                 var response = await http.GetAsync($"https://yahoo-finance-api-data.p.rapidapi.com/market/crypto?screenerId=FIFTY_TWO_WK_GAINERS_CRYPTOCURRENCIES&offset=0&limit=0");
                 if (response.IsSuccessStatusCode)
@@ -38,8 +42,8 @@ namespace MarketDataFinance.Adapter
         {
             using (HttpClient http = new HttpClient())
             {
-                http.DefaultRequestHeaders.Add("x-rapidapi-host", "yahoo-finance-api-data.p.rapidapi.com");
-                http.DefaultRequestHeaders.Add("x-rapidapi-key", "5f7cb7d7eemshfead8b6141e8079p16ce7cjsne53484c89fd4");
+                http.DefaultRequestHeaders.Add(RapidApiHostHeader, RapidApiHostValue);
+                http.DefaultRequestHeaders.Add(RapidApiKeyHeader, RapidApiKeyValue);
                 var response = await http.GetAsync($"https://yahoo-finance-api-data.p.rapidapi.com/market/etf?screenerId=COMMODITY_ETFS&region=us&offset=0&limit=0");
                 if (response.IsSuccessStatusCode)
                 {
@@ -58,8 +62,8 @@ namespace MarketDataFinance.Adapter
         {
             using (HttpClient http = new HttpClient())
             {
-                http.DefaultRequestHeaders.Add("x-rapidapi-host", "yahoo-finance-api-data.p.rapidapi.com");
-                http.DefaultRequestHeaders.Add("x-rapidapi-key", "5f7cb7d7eemshfead8b6141e8079p16ce7cjsne53484c89fd4");
+                http.DefaultRequestHeaders.Add(RapidApiHostHeader, RapidApiHostValue);
+                http.DefaultRequestHeaders.Add(RapidApiKeyHeader, RapidApiKeyValue);
                 var response = await http.GetAsync($"https://yahoo-finance-api-data.p.rapidapi.com/market/etf?screenerId=COMMODITY_ETFS&region=us&offset=0&limit=0");
                 if (response.IsSuccessStatusCode)
                 {
@@ -78,8 +82,8 @@ namespace MarketDataFinance.Adapter
         {
             using (HttpClient http = new HttpClient())
             {
-                http.DefaultRequestHeaders.Add("x-rapidapi-host", "yahoo-finance-api-data.p.rapidapi.com");
-                http.DefaultRequestHeaders.Add("x-rapidapi-key", "5f7cb7d7eemshfead8b6141e8079p16ce7cjsne53484c89fd4");
+                http.DefaultRequestHeaders.Add(RapidApiHostHeader, RapidApiHostValue);
+                http.DefaultRequestHeaders.Add(RapidApiKeyHeader, RapidApiKeyValue);
                 var response = await http.GetAsync($"https://yahoo-finance-api-data.p.rapidapi.com/summary/option-price?symbol={symbol}");
                 if (response.IsSuccessStatusCode)
                 {
@@ -98,8 +102,8 @@ namespace MarketDataFinance.Adapter
         {
                using (HttpClient http = new HttpClient())
             {
-                http.DefaultRequestHeaders.Add("x-rapidapi-host", "yahoo-finance-api-data.p.rapidapi.com");
-                http.DefaultRequestHeaders.Add("x-rapidapi-key", "5f7cb7d7eemshfead8b6141e8079p16ce7cjsne53484c89fd4");
+                http.DefaultRequestHeaders.Add(RapidApiHostHeader, RapidApiHostValue);
+                http.DefaultRequestHeaders.Add(RapidApiKeyHeader, RapidApiKeyValue);
                 var response = await http.GetAsync($"https://yahoo-finance-api-data.p.rapidapi.com/summary/option-price?symbol={symbol}&limit={limit}");
                 if (response.IsSuccessStatusCode)
                 {
@@ -120,8 +124,8 @@ namespace MarketDataFinance.Adapter
         {
             using (HttpClient http = new HttpClient())
             {
-                http.DefaultRequestHeaders.Add("x-rapidapi-host", "yahoo-finance-api-data.p.rapidapi.com");
-                http.DefaultRequestHeaders.Add("x-rapidapi-key", "5f7cb7d7eemshfead8b6141e8079p16ce7cjsne53484c89fd4");
+                http.DefaultRequestHeaders.Add(RapidApiHostHeader, RapidApiHostValue);
+                http.DefaultRequestHeaders.Add(RapidApiKeyHeader, RapidApiKeyValue);
                 var response = await http.GetAsync($"https://yahoo-finance-api-data.p.rapidapi.com/chart/simple-chart?symbol={symbol}&limit={limit}&range={range}");
                 if (response.IsSuccessStatusCode)
                 {
@@ -141,8 +145,8 @@ namespace MarketDataFinance.Adapter
         {
             using (HttpClient http = new HttpClient())
             {
-                http.DefaultRequestHeaders.Add("x-rapidapi-host", "yahoo-finance-api-data.p.rapidapi.com");
-                http.DefaultRequestHeaders.Add("x-rapidapi-key", "5f7cb7d7eemshfead8b6141e8079p16ce7cjsne53484c89fd4");
+                http.DefaultRequestHeaders.Add(RapidApiHostHeader, RapidApiHostValue);
+                http.DefaultRequestHeaders.Add(RapidApiKeyHeader, RapidApiKeyValue);
                 string url = $"https://yahoo-finance-api-data.p.rapidapi.com/chart/advanced-chart?symbol={symbol}&limit={limit}&from={from}&to={to}&range={range}";
                 var response = await http.GetAsync(url);
                 if (response.IsSuccessStatusCode)
@@ -162,8 +166,8 @@ namespace MarketDataFinance.Adapter
         {
             using (HttpClient http = new HttpClient())
             {
-                http.DefaultRequestHeaders.Add("x-rapidapi-host", "yahoo-finance-api-data.p.rapidapi.com");
-                http.DefaultRequestHeaders.Add("x-rapidapi-key", "5f7cb7d7eemshfead8b6141e8079p16ce7cjsne53484c89fd4");
+                http.DefaultRequestHeaders.Add(RapidApiHostHeader, RapidApiHostValue);
+                http.DefaultRequestHeaders.Add(RapidApiKeyHeader, RapidApiKeyValue);
                 string url = $"https://yahoo-finance-api-data.p.rapidapi.com/search/news?keyword={keyword}&limit={limit}";
                 var response = await http.GetAsync(url);
                 if (response.IsSuccessStatusCode)
@@ -182,8 +186,8 @@ namespace MarketDataFinance.Adapter
         {
             using (HttpClient http = new HttpClient())
             {
-                http.DefaultRequestHeaders.Add("x-rapidapi-host", "yahoo-finance-api-data.p.rapidapi.com");
-                http.DefaultRequestHeaders.Add("x-rapidapi-key", "5f7cb7d7eemshfead8b6141e8079p16ce7cjsne53484c89fd4");
+                http.DefaultRequestHeaders.Add(RapidApiHostHeader, RapidApiHostValue);
+                http.DefaultRequestHeaders.Add(RapidApiKeyHeader, RapidApiKeyValue);
                 var response = await http.GetAsync($"https://yahoo-finance-api-data.p.rapidapi.com/news/detail?id=4cd7395e-588c-4a64-a33b-64371b30dc95");
                 if (response.IsSuccessStatusCode)
                 {
@@ -202,8 +206,8 @@ namespace MarketDataFinance.Adapter
         {
             using (HttpClient http = new HttpClient())
             {
-                http.DefaultRequestHeaders.Add("x-rapidapi-host", "yahoo-finance-api-data.p.rapidapi.com");
-                http.DefaultRequestHeaders.Add("x-rapidapi-key", "5f7cb7d7eemshfead8b6141e8079p16ce7cjsne53484c89fd4");
+                http.DefaultRequestHeaders.Add(RapidApiHostHeader, RapidApiHostValue);
+                http.DefaultRequestHeaders.Add(RapidApiKeyHeader, RapidApiKeyValue);
                 var response = await http.GetAsync($"https://yahoo-finance-api-data.p.rapidapi.com/news/hot-news?limit={limit}");
                 if (response.IsSuccessStatusCode)
                 {
@@ -222,8 +226,8 @@ namespace MarketDataFinance.Adapter
         {
             using (HttpClient http = new HttpClient())
             {
-                http.DefaultRequestHeaders.Add("x-rapidapi-host", "yahoo-finance-api-data.p.rapidapi.com");
-                http.DefaultRequestHeaders.Add("x-rapidapi-key", "5f7cb7d7eemshfead8b6141e8079p16ce7cjsne53484c89fd4");
+                http.DefaultRequestHeaders.Add(RapidApiHostHeader, RapidApiHostValue);
+                http.DefaultRequestHeaders.Add(RapidApiKeyHeader, RapidApiKeyValue);
                 var response = await http.GetAsync($"https://yahoo-finance-api-data.p.rapidapi.com/news/hot-news?limit={limit}");
                 if (response.IsSuccessStatusCode)
                 {

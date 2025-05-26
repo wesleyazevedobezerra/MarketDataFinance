@@ -8,6 +8,6 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class Module2Entity
     {
-        public string ModuleId { get; set; }
+        public string? ModuleId { get; set; }
     }
 }
