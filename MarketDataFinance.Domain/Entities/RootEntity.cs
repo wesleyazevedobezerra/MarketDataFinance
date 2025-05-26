@@ -9,7 +9,7 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class RootEntity
     {
-        public DataEntity Data { get; set; }
+        public DataEntity? Data { get; set; }
         public string? Message { get; set; }
         public bool Success { get; set; }
         public int Code { get; set; }

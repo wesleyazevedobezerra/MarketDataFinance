@@ -12,7 +12,6 @@ namespace MarketDataFinance.Domain.Entities
         public List<string>? Tags { get; set; }
         public DateTime PubDate { get; set; }
         public HeroModuleEntity? HeroModule { get; set; }
-        public HideAdTypesEntity? HideAdTypes { get; set; }
         public bool CommentsAllowed { get; set; }
         public object? Polls { get; set; }
         public string? ContentType { get; set; }
@@ -24,7 +23,7 @@ namespace MarketDataFinance.Domain.Entities
         public bool IsCreatorContent { get; set; }
         public List<XrayMetumEntity>? XrayMeta { get; set; }
         public string? Id { get; set; }
-        public string AmpUrl { get; set; }
+        public string? AmpUrl { get; set; }
         public List<string>? EditorialTags { get; set; }
         public bool IsHosted { get; set; }
         public string? ProviderContentUrl { get; set; }

@@ -8,7 +8,7 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class ProviderEntity
     {
-        public LogoEntity Logo { get; set; }
+        public LogoEntity? Logo { get; set; }
         public string? DisplayName { get; set; }
         public ProviderBrandEntity? ProviderBrand { get; set; }
         public string? Id { get; set; }

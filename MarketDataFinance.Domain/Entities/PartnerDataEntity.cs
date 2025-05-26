@@ -19,7 +19,6 @@ namespace MarketDataFinance.Domain.Entities
         public bool TpConsent { get; set; }
         public string? HostedType { get; set; }
         public string? SpaceId { get; set; }
-        public CoverEntity? Cover { get; set; }
         public string? Url { get; set; }
         public List<SlotEntity>? Slots { get; set; }
         public string? Uuid { get; set; }

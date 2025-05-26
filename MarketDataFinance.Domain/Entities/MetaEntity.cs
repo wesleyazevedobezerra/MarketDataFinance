@@ -8,7 +8,7 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class MetaEntity
     {
-        public string TemplateName { get; set; }
+        public string? TemplateName { get; set; }
     }
     
     public class MetaNewsEntity
