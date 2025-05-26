@@ -48,7 +48,5 @@ namespace MarketDataFinance.Application.ViewModels
         public string? underlyingSymbol { get; set; }
         public QuoteViewModel? quote { get; set; }
         public bool hasMiniOptions { get; set; }
-        public ExpirationDatesViewModel? expirationDates { get; set; }
-        public StrikesViewModel? strikes { get; set; }
     }
 }

@@ -68,7 +68,6 @@ namespace MarketDataFinance.Application.ViewModels
         public double FiftyTwoWeekLowChangePercent { get; set; }
         public string? Region { get; set; }
         public string? FiftyTwoWeekRange { get; set; }
-        public CorporateActionsViewModel? CorporateActions { get; set; }
         public double TrailingThreeMonthNavReturns { get; set; }
         public double TwoHundredDayAverageChange { get; set; }
         public double FiftyTwoWeekHigh { get; set; }

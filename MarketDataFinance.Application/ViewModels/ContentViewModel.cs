@@ -13,7 +13,6 @@ namespace MarketDataFinance.Application.ViewModels
         public List<string>? Tags { get; set; }
         public DateTime PubDate { get; set; }
         public HeroModuleViewModel? HeroModule { get; set; }
-        public HideAdTypesViewModel? HideAdTypes { get; set; }
         public bool CommentsAllowed { get; set; }
         public object? Polls { get; set; }
         public string? ContentType { get; set; }
@@ -29,7 +28,7 @@ namespace MarketDataFinance.Application.ViewModels
         public List<string>? EditorialTags { get; set; }
         public bool IsHosted { get; set; }
         public string? ProviderContentUrl { get; set; }
-        public string Description { get; set; }
+        public string? Description { get; set; }
         public ThumbnailViewModel? Thumbnail { get; set; }
         public ReadingMetaViewModel? ReadingMeta { get; set; }
         public StructuredSummaryViewModel? StructuredSummary { get; set; }

@@ -8,7 +8,7 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class MetaViewModel
     {
-        public string TemplateName { get; set; }
+        public string? TemplateName { get; set; }
     }
     public class MetaNewsViewModel
     {

@@ -8,7 +8,7 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class DarkLogoViewModel
     {
-        public string OriginalUrl { get; set; }
+        public string? OriginalUrl { get; set; }
         public int OriginalWidth { get; set; }
         public List<ResolutionViewModel>? Resolutions { get; set; }
         public int OriginalHeight { get; set; }

@@ -19,7 +19,6 @@ namespace MarketDataFinance.Application.ViewModels
         public bool TpConsent { get; set; }
         public string? HostedType { get; set; }
         public string? SpaceId { get; set; }
-        public CoverViewModel? Cover { get; set; }
         public string? Url { get; set; }
         public List<SlotViewModel>? Slots { get; set; }
         public string? Uuid { get; set; }
