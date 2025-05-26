@@ -1,10 +1,12 @@
 ﻿using MarketDataFinance.Domain.Contracts.Adapters;
 using MarketDataFinance.Domain.Entities;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Reflection.PortableExecutable;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,10 +15,19 @@ namespace MarketDataFinance.Adapter
 {
     public class AdapterData : IAdapterData
     {
-        private const string RapidApiHostHeader = "x-rapidapi-host";
-        private const string RapidApiHostValue = "yahoo-finance-api-data.p.rapidapi.com";
-        private const string RapidApiKeyHeader = "x-rapidapi-key";
-        private const string RapidApiKeyValue = "5f7cb7d7eemshfead8b6141e8079p16ce7cjsne53484c89fd4";
+        private readonly string RapidApiHostHeader;
+        private readonly string RapidApiKeyValue;
+        private readonly string RapidApiHostValue;
+        private readonly string RapidApiKeyHeader;
+
+        public AdapterData(IConfiguration _configuration)
+        {
+            RapidApiHostHeader = _configuration["RapidApi:HostHeader"] ?? string.Empty;
+            RapidApiKeyValue = _configuration["RapidApi:KeyValue"] ?? string.Empty;
+            RapidApiHostValue = _configuration["RapidApi:HostValue"] ?? string.Empty;
+            RapidApiKeyHeader = _configuration["RapidApi:KeyHeader"] ?? string.Empty;
+        }
+
         public async Task<RootEntity> SearchMarketCrypto()
         {
             using (HttpClient http = new HttpClient())
