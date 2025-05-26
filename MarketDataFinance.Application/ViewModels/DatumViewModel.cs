@@ -44,7 +44,6 @@ namespace MarketDataFinance.Application.ViewModels
         public string? QuoteType { get; set; }
         public double PostMarketPrice { get; set; }
         public bool Triggerable { get; set; }
-        //public OptionsViewModel options { get; set; }
         public string? underlyingSymbol { get; set; }
         public QuoteViewModel? quote { get; set; }
         public bool hasMiniOptions { get; set; }

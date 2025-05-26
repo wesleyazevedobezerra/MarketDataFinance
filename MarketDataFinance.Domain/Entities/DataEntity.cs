@@ -52,16 +52,8 @@ namespace MarketDataFinance.Domain.Entities
         public string? underlyingSymbol { get; set; }
         public QuoteEntity? quote { get; set; }
         public bool hasMiniOptions { get; set; }
-        //public ExpirationDatesEntity expirationDates { get; set; }
-        //public StrikesEntity strikes { get; set; }
     }
 
-    //public class ExpirationDatesEntity
-    //{
-    //}
-    //public class StrikesEntity
-    //{
-    //}
 
 
     public class DataNews
