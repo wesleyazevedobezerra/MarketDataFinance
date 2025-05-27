@@ -8,8 +8,8 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class ResultEntity
     {
-        public MetaFinanceChartEntity Meta { get; set; }
-        public List<int> Timestamp { get; set; }
-        public IndicatorsEntity Indicators { get; set; }
+        public MetaFinanceChartEntity? Meta { get; set; }
+        public List<int>? Timestamp { get; set; }
+        public IndicatorsEntity? Indicators { get; set; }
     }
 }

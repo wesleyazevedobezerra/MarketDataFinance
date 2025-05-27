@@ -8,6 +8,6 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class AdjcloseEntity
     {
-        public List<double> Adjclose { get; set; }
+        public List<double>? Adjclose { get; set; }
     }
 }

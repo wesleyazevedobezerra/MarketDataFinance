@@ -8,8 +8,8 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class CurrentTradingPeriodViewModel
     {
-        public PreViewModel Pre { get; set; }
-        public RegularViewModel Regular { get; set; }
-        public PostViewModel Post { get; set; }
+        public PreViewModel? Pre { get; set; }
+        public RegularViewModel? Regular { get; set; }
+        public PostViewModel? Post { get; set; }
     }
 }

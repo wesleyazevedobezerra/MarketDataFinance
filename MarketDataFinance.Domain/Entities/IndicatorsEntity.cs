@@ -8,7 +8,7 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class IndicatorsEntity
     {
-        public List<QuoteFinanceChartEntity> Quote { get; set; }
-        public List<AdjcloseEntity> Adjclose { get; set; }
+        public List<QuoteFinanceChartEntity>? Quote { get; set; }
+        public List<AdjcloseEntity>? Adjclose { get; set; }
     }
 }

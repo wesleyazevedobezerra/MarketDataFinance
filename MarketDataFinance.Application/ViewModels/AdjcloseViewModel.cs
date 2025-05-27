@@ -8,6 +8,6 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class AdjcloseViewModel
     {
-        public List<double> Adjclose { get; set; }
+        public List<double>? Adjclose { get; set; }
     }
 }

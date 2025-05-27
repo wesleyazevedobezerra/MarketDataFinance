@@ -8,7 +8,7 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class PreEntity
     {
-        public string Timezone { get; set; }
+        public string? Timezone { get; set; }
         public int End { get; set; }
         public int Start { get; set; }
         public int Gmtoffset { get; set; }

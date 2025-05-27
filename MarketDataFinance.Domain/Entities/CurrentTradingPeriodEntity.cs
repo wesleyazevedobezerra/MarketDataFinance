@@ -8,8 +8,8 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class CurrentTradingPeriodEntity
     {
-        public PreEntity Pre { get; set; }
-        public RegularEntity Regular { get; set; }
-        public PostEntity Post { get; set; }
+        public PreEntity? Pre { get; set; }
+        public RegularEntity? Regular { get; set; }
+        public PostEntity? Post { get; set; }
     }
 }

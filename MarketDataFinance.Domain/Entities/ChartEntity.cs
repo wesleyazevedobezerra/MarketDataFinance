@@ -8,7 +8,7 @@ namespace MarketDataFinance.Domain.Entities
 {
     public class ChartEntity
     {
-        public List<ResultEntity> Result { get; set; }
-        public object Error { get; set; }
+        public List<ResultEntity>? Result { get; set; }
+        public object? Error { get; set; }
     }
 }

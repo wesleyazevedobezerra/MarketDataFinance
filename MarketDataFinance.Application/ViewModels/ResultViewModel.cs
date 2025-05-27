@@ -8,8 +8,8 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class ResultViewModel
     {
-        public MetaFinanceChartViewModel Meta { get; set; }
-        public List<int> Timestamp { get; set; }
-        public IndicatorsViewModel Indicators { get; set; }
+        public MetaFinanceChartViewModel? Meta { get; set; }
+        public List<int>? Timestamp { get; set; }
+        public IndicatorsViewModel? Indicators { get; set; }
     }
 }

@@ -18,13 +18,9 @@ namespace MarketDataFinance.Controllers
 
 
         [HttpGet("finance-chart")]
-        public async Task<IActionResult> GetFinanceChart([FromQuery] string symbol,
-                                                          [FromQuery] string region,
-                                                          [FromQuery] string lang,
-                                                          [FromQuery] string interval,
-                                                          [FromQuery] string range)
+        public async Task<IActionResult> GetFinanceChart([FromQuery] string symbol)
         {
-            return Ok(await _financechartAppServices.SearchChartFinance(symbol, region, lang, interval, range));
+            return Ok(await _financechartAppServices.SearchChartFinance(symbol));
         }
     }
 }

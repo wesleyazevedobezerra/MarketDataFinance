@@ -91,10 +91,10 @@ namespace MarketDataFinance.Domain.Entities
 
     public class QuoteFinanceChartEntity
     {
-        public List<double> Low { get; set; }
-        public List<long> Volume { get; set; }
-        public List<double> High { get; set; }
-        public List<double> Open { get; set; }
-        public List<double> Close { get; set; }
+        public List<double>? Low { get; set; }
+        public List<long>? Volume { get; set; }
+        public List<double>? High { get; set; }
+        public List<double>? Open { get; set; }
+        public List<double>? Close { get; set; }
     }
 }

@@ -18,9 +18,9 @@ namespace MarketDataFinance.Application.Services
         {
             _dataAdapter = dataAdapter;
         }
-        public async Task<RootFinanceChartViewModel> SearchChartFinance(string symbol, string region, string lang, string interval, string range)
+        public async Task<RootFinanceChartViewModel> SearchChartFinance(string symbol)
         {
-            var entity = await _dataAdapter.SearchChartFinance(symbol, region, lang, interval, range);
+            var entity = await _dataAdapter.SearchChartFinance(symbol);
             return TypeAdapter.Adapt<RootFinanceChartEntity, RootFinanceChartViewModel>(entity);
         }
     }

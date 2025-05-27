@@ -251,7 +251,7 @@ namespace MarketDataFinance.Adapter
             }
         }
 
-        public async Task<RootFinanceChartEntity> SearchChartFinance(string symbol, string region, string lang, string interval, string range)
+        public async Task<RootFinanceChartEntity> SearchChartFinance(string symbol)
         {
             using (HttpClient http = new HttpClient())
             {

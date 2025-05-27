@@ -8,7 +8,7 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class IndicatorsViewModel
     {
-        public List<QuoteFinanceChartViewModel> Quote { get; set; }
-        public List<AdjcloseViewModel> Adjclose { get; set; }
+        public List<QuoteFinanceChartViewModel>? Quote { get; set; }
+        public List<AdjcloseViewModel>? Adjclose { get; set; }
     }
 }
