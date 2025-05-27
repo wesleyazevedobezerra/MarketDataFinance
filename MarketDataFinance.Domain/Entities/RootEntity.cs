@@ -45,4 +45,8 @@ namespace MarketDataFinance.Domain.Entities
         public bool Success { get; set; }
         public int Code { get; set; }
     }
+    public class RootFinanceChartEntity
+    {
+        public ChartEntity Chart { get; set; }
+    }
 }

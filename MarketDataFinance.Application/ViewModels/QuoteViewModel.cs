@@ -88,4 +88,13 @@ namespace MarketDataFinance.Application.ViewModels
         public int EarningsCallTimestampEnd { get; set; }
         public bool IsEarningsDateEstimate { get; set; }
     }
+
+    public class QuoteFinanceChartViewModel
+    {
+        public List<double> Low { get; set; }
+        public List<long> Volume { get; set; }
+        public List<double> High { get; set; }
+        public List<double> Open { get; set; }
+        public List<double> Close { get; set; }
+    }
 }

@@ -51,4 +51,9 @@ namespace MarketDataFinance.Application.ViewModels
         public bool Success { get; set; }
         public int Code { get; set; }
     }
+
+    public class RootFinanceChartViewModel
+    {
+        public ChartViewModel Chart { get; set; }
+    }
 }

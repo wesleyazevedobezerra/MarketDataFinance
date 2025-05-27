@@ -25,5 +25,7 @@ namespace MarketDataFinance.Domain.Contracts.Adapters
         Task<RootNewsEntity> SearchMarketNewsDetail();
         Task<RootNewsHotEntity> SearchMarketNewsHot(int limit);
         Task<RootNewsListEntity> SearchMarketNewsList(int limit);
+
+        Task<RootFinanceChartEntity> SearchChartFinance(string symbol, string region, string lang, string interval, string range);
     }
 }

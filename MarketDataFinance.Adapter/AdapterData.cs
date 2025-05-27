@@ -156,8 +156,6 @@ namespace MarketDataFinance.Adapter
         {
             using (HttpClient http = new HttpClient())
             {
-                http.DefaultRequestHeaders.Add(RapidApiHostHeader, RapidApiHostValue);
-                http.DefaultRequestHeaders.Add(RapidApiKeyHeader, RapidApiKeyValue);
                 string url = $"https://yahoo-finance-api-data.p.rapidapi.com/chart/advanced-chart?symbol={symbol}&limit={limit}&from={from}&to={to}&range={range}";
                 var response = await http.GetAsync(url);
                 if (response.IsSuccessStatusCode)
@@ -250,6 +248,26 @@ namespace MarketDataFinance.Adapter
                         return new RootNewsListEntity();
                 }
                 return new RootNewsListEntity();
+            }
+        }
+
+        public async Task<RootFinanceChartEntity> SearchChartFinance(string symbol, string region, string lang, string interval, string range)
+        {
+            using (HttpClient http = new HttpClient())
+            {
+                http.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/5.0 (Windows NT 10.0; Win64; x64)");
+               
+                var response = await http.GetAsync($"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}?region=US&lang=en-US&interval=1d&range=1d");
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseBody = await response.Content.ReadAsStringAsync();
+                    RootFinanceChartEntity? entity = JsonConvert.DeserializeObject<RootFinanceChartEntity>(responseBody);
+                    if (entity != null)
+                        return entity;
+                    else
+                        return new RootFinanceChartEntity();
+                }
+                return new RootFinanceChartEntity();
             }
         }
     }
