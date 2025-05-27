@@ -1,5 +1,6 @@
 ﻿using MarketDataFinance.Application.Interfaces;
 using MarketDataFinance.Application.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -8,6 +9,7 @@ namespace MarketDataFinance.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "Change", AuthenticationSchemes = "Bearer")]
     public class ChartController : ControllerBase
     {
 
@@ -16,9 +18,6 @@ namespace MarketDataFinance.Controllers
         {
             _chartAppServices = chartAppServices;
         }
-
-
-
 
 
         [HttpGet("simple-chart")]
@@ -38,7 +37,6 @@ namespace MarketDataFinance.Controllers
         {
             return Ok(await _chartAppServices.SearchChartAdvanced(symbol, limit, from, to, range));
         }
-
 
     }
 }
