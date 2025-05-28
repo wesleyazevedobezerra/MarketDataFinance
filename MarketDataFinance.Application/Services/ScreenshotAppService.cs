@@ -31,18 +31,19 @@ namespace MarketDataFinance.Application.Services
         {
             
 
-            var ibovespa = await _financeChartAppService.SearchChartFinance("^BVSP");
-            var usdBRL = await _financeChartAppService.SearchChartFinance("USDBRL%3DX");
-            var sep500 = await _financeChartAppService.SearchChartFinance("^GSPC");
-            var eurBRL = await _financeChartAppService.SearchChartFinance("EURBRL%3DX");
-            var nasdaq = await _financeChartAppService.SearchChartFinance("^IXIC");
+            var ibovespaTask =  _financeChartAppService.SearchChartFinance("^BVSP");
+            var usdBRLTask   =  _financeChartAppService.SearchChartFinance("USDBRL%3DX");
+            var sep500Task   =  _financeChartAppService.SearchChartFinance("^GSPC");
+            var eurBRLTask   =  _financeChartAppService.SearchChartFinance("EURBRL%3DX");
+            var nasdaqTask   =  _financeChartAppService.SearchChartFinance("^IXIC");
 
+            await Task.WhenAll(ibovespaTask, usdBRLTask, sep500Task, eurBRLTask, nasdaqTask);
 
-            var entityIbovespa = ScreenshotFactory.SetEntityToViewModel(ibovespa);
-            var entityUsdBrl = ScreenshotFactory.SetEntityToViewModel(usdBRL);
-            var entitySep500 = ScreenshotFactory.SetEntityToViewModel(sep500);
-            var entityEurBrl = ScreenshotFactory.SetEntityToViewModel(eurBRL);
-            var entityNasdaq = ScreenshotFactory.SetEntityToViewModel(nasdaq);
+            var entityIbovespa = ScreenshotFactory.SetEntityToViewModel(ibovespaTask.Result);
+            var entityUsdBrl = ScreenshotFactory.SetEntityToViewModel(usdBRLTask.Result);
+            var entitySep500 = ScreenshotFactory.SetEntityToViewModel(sep500Task.Result);
+            var entityEurBrl = ScreenshotFactory.SetEntityToViewModel(eurBRLTask.Result);
+            var entityNasdaq = ScreenshotFactory.SetEntityToViewModel(nasdaqTask.Result);
 
 
             string base64String = await _htmlToBase64Helper.Transform(entityIbovespa, 
