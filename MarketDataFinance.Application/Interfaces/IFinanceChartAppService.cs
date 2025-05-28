@@ -10,6 +10,6 @@ namespace MarketDataFinance.Application.Interfaces
 {
     public interface IFinanceChartAppService
     {
-        Task<RootFinanceChartViewModel> SearchChartFinance(string symbol);
+        Task<RootFinanceChartEntity> SearchChartFinance(string symbol);
     }
 }

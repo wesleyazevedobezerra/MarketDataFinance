@@ -1,4 +1,5 @@
-﻿using MarketDataFinance.Application.Interfaces;
+﻿using MarketDataFinance.Application.Factories;
+using MarketDataFinance.Application.Interfaces;
 using MarketDataFinance.Application.ViewModels;
 using PuppeteerSharp;
 using System;
@@ -25,8 +26,7 @@ namespace MarketDataFinance.Application.Services
 
         public async Task<string> GetScreenshotBase64Async()
         {
-            string GetPercentClass(double percent) => percent >= 0 ? "positivo" : "negativo";
-            string GetPlusMinusClass(double percent) => percent >= 0 ? "+" : "-";
+            
 
             var ibovespa = await _financeChartAppService.SearchChartFinance("^BVSP");
             var usdBRL = await _financeChartAppService.SearchChartFinance("USDBRL%3DX");
@@ -34,45 +34,14 @@ namespace MarketDataFinance.Application.Services
             var eurBRL = await _financeChartAppService.SearchChartFinance("EURBRL%3DX");
             var nasdaq = await _financeChartAppService.SearchChartFinance("^IXIC");
 
-            MetaFinanceChartViewModel metaIbovesp = ibovespa.Chart.Result[0].Meta;
-            MetaFinanceChartViewModel metaUsd = usdBRL.Chart.Result[0].Meta;
-            MetaFinanceChartViewModel metasep500 = sep500.Chart.Result[0].Meta;
-            MetaFinanceChartViewModel metaEur = eurBRL.Chart.Result[0].Meta;
-            MetaFinanceChartViewModel metaNasdaq = nasdaq.Chart.Result[0].Meta;
+
+            var entityIbovespa = ScreenshotFactory.SetEntityToViewModel(ibovespa);
+            var entityUsdBrl = ScreenshotFactory.SetEntityToViewModel(usdBRL);
+            var entitySep500 = ScreenshotFactory.SetEntityToViewModel(sep500);
+            var entityEurBrl = ScreenshotFactory.SetEntityToViewModel(eurBRL);
+            var entityNasdaq = ScreenshotFactory.SetEntityToViewModel(nasdaq);
 
 
-            double ibovespaPercent = ((metaIbovesp.RegularMarketPrice - metaIbovesp.ChartPreviousClose) / metaIbovesp.ChartPreviousClose) * 100;
-            double usdPercent = ((metaUsd.RegularMarketPrice - metaUsd.ChartPreviousClose) / metaUsd.ChartPreviousClose) * 100;
-            double sep500Percent = ((metasep500.RegularMarketPrice - metasep500.ChartPreviousClose) / metasep500.ChartPreviousClose) * 100;
-            double eurPercent = ((metaEur.RegularMarketPrice - metaEur.ChartPreviousClose) / metaEur.ChartPreviousClose) * 100;
-            double nasdaqPercent = ((metaNasdaq.RegularMarketPrice - metaNasdaq.ChartPreviousClose) / metaNasdaq.ChartPreviousClose) * 100;
-
-
-            string ibovClass = GetPercentClass((ibovespaPercent));
-            string usdClass = GetPercentClass((usdPercent));
-            string spClass = GetPercentClass((sep500Percent));
-            string eurClass = GetPercentClass((eurPercent));
-            string nasdaqClass = GetPercentClass((nasdaqPercent));
-
-            string ibovPlusMinus = GetPlusMinusClass((ibovespaPercent));
-            string usdPlusMinus = GetPlusMinusClass((usdPercent));
-            string spPlusMinus = GetPlusMinusClass((sep500Percent));
-            string eurPlusMinus = GetPlusMinusClass((eurPercent));
-            string nasdaqPlusMinus = GetPlusMinusClass((nasdaqPercent));
-
-
-            string IbovespaRegularMarketChangePercent = ((ibovespaPercent < 0) ? (ibovespaPercent * -1) : ibovespaPercent).ToString("N2").Replace(",", ".");
-            string usdPercentRegularMarketChangePercent = ((usdPercent < 0) ? (usdPercent * -1) : usdPercent).ToString("N2").Replace(",", ".");
-            string sep500RegularMarketChangePercent = ((sep500Percent < 0) ? (sep500Percent * -1) : sep500Percent).ToString("N2").Replace(",", ".");
-            string eurRegularMarketChangePercent = ((eurPercent < 0) ? (eurPercent * -1) : eurPercent).ToString("N2").Replace(",", ".");
-            string nasdaqRegularMarketChangePercent = ((nasdaqPercent < 0) ? (nasdaqPercent * -1) : nasdaqPercent).ToString("N2").Replace(",", ".");
-
-
-            string IbovespaRegularMarketPrice = Math.Truncate(ibovespa.Chart?.Result?[0]?.Meta?.RegularMarketPrice ?? 0).ToString("N0").Replace(",", ".");
-            string usdBRLRegularMarketPrice = (usdBRL.Chart?.Result?[0]?.Meta?.RegularMarketPrice ?? 0).ToString("N2").Replace(",", ".");
-            string sep500RegularMarketPrice = Math.Truncate(sep500.Chart?.Result?[0]?.Meta?.RegularMarketPrice ?? 0).ToString("N0").Replace(",", ".");
-            string eurBRLRegularMarketPrice = (eurBRL.Chart?.Result?[0]?.Meta?.RegularMarketPrice ?? 0).ToString("N2").Replace(",", ".");
-            string nasdaqBRLRegularMarketPrice = (nasdaq.Chart?.Result?[0]?.Meta?.RegularMarketPrice ?? 0).ToString("N2").Replace(",", ".");
 
             var html = @"
                                 <!DOCTYPE html>
@@ -156,36 +125,36 @@ namespace MarketDataFinance.Application.Services
                                     <div class='linha'>
                                       <div class='esquerda'>ibovespa</div>
                                       <div class='direita'>
-                                        <span>{IbovespaRegularMarketPrice} pts</span>
-                                        <span class='{ibovClass}'>{ibovPlusMinus}{IbovespaRegularMarketChangePercent}%</span>
+                                        <span>{entityIbovespa.RegularMarketPrice} pts</span>
+                                        <span class='{entityIbovespa.PercentClass}'>{entityIbovespa.PercentPlusMinusClass}{entityIbovespa.PercentString}%</span>
                                       </div>
                                     </div>
                                     <div class='linha'>
                                       <div class='esquerda'>dólar</div>
                                       <div class='direita'>
-                                        <span> {usdBRLRegularMarketPrice}</span>
-                                        <span class='{usdClass}'>{usdPlusMinus}{usdPercentRegularMarketChangePercent}%</span>
+                                        <span> {entityUsdBrl.RegularMarketPrice}</span>
+                                        <span class='{entityUsdBrl.PercentClass}'>{entityUsdBrl.PercentPlusMinusClass}{entityUsdBrl.PercentString}%</span>
                                       </div>
                                     </div>
                                     <div class='linha'>
                                       <div class='esquerda'>s&amp;p 500</div>
                                       <div class='direita'>
-                                        <span>{sep500RegularMarketPrice} pts</span>
-                                        <span class='{spClass}'>{spPlusMinus}{sep500RegularMarketChangePercent}%</span>
+                                        <span>{entitySep500.RegularMarketPrice} pts</span>
+                                        <span class='{entitySep500.PercentClass}'>{entitySep500.PercentPlusMinusClass}{entitySep500.PercentString}%</span>
                                       </div>
                                     </div>
                                     <div class='linha'>
                                       <div class='esquerda'>euro</div>
                                       <div class='direita'>
-                                        <span> {eurBRLRegularMarketPrice}</span>
-                                        <span class='{eurClass}'>{eurPlusMinus}{eurRegularMarketChangePercent}%</span>
+                                        <span> {entityEurBrl.RegularMarketPrice}</span>
+                                        <span class='{entityEurBrl.PercentClass}'>{entityEurBrl.PercentPlusMinusClass}{entityEurBrl.PercentString}%</span>
                                       </div>
                                     </div>
                                     <div class='linha'>
                                       <div class='esquerda'>nasdaq</div>
                                       <div class='direita'>
-                                        <span> {nasdaqBRLRegularMarketPrice}</span>
-                                        <span class='{nasdaqClass}'>{nasdaqPlusMinus}{nasdaqRegularMarketChangePercent}%</span>
+                                        <span> {entityNasdaq.RegularMarketPrice}</span>
+                                        <span class='{entityNasdaq.PercentClass}'>{entityNasdaq.PercentPlusMinusClass}{entityNasdaq.PercentString}%</span>
                                       </div>
                                     </div>
                                   </div>
