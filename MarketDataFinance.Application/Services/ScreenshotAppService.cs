@@ -68,11 +68,11 @@ namespace MarketDataFinance.Application.Services
             string nasdaqRegularMarketChangePercent = ((nasdaqPercent < 0) ? (nasdaqPercent * -1) : nasdaqPercent).ToString("N2").Replace(",", ".");
 
 
-            string IbovespaRegularMarketPrice = Math.Truncate(ibovespa?.Chart?.Result?[0]?.Meta?.RegularMarketPrice ?? 0).ToString("N0").Replace(",", ".");
-            string usdBRLRegularMarketPrice = (usdBRL?.Chart?.Result?[0]?.Meta?.RegularMarketPrice ?? 0).ToString("N2").Replace(",", ".");
-            string sep500RegularMarketPrice = Math.Truncate(sep500?.Chart?.Result?[0]?.Meta?.RegularMarketPrice ?? 0).ToString("N0").Replace(",", ".");
-            string eurBRLRegularMarketPrice = (eurBRL?.Chart?.Result?[0]?.Meta?.RegularMarketPrice ?? 0).ToString("N2").Replace(",", ".");
-            string nasdaqBRLRegularMarketPrice = (nasdaq?.Chart?.Result?[0]?.Meta?.RegularMarketPrice ?? 0).ToString("N2").Replace(",", ".");
+            string IbovespaRegularMarketPrice = Math.Truncate(ibovespa.Chart?.Result?[0]?.Meta?.RegularMarketPrice ?? 0).ToString("N0").Replace(",", ".");
+            string usdBRLRegularMarketPrice = (usdBRL.Chart?.Result?[0]?.Meta?.RegularMarketPrice ?? 0).ToString("N2").Replace(",", ".");
+            string sep500RegularMarketPrice = Math.Truncate(sep500.Chart?.Result?[0]?.Meta?.RegularMarketPrice ?? 0).ToString("N0").Replace(",", ".");
+            string eurBRLRegularMarketPrice = (eurBRL.Chart?.Result?[0]?.Meta?.RegularMarketPrice ?? 0).ToString("N2").Replace(",", ".");
+            string nasdaqBRLRegularMarketPrice = (nasdaq.Chart?.Result?[0]?.Meta?.RegularMarketPrice ?? 0).ToString("N2").Replace(",", ".");
 
             var html = @"
                                 <!DOCTYPE html>
