@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,6 +22,7 @@ namespace MarketDataFinance.Application.Services
         }
 
 
+
         public async Task<string> GetScreenshotBase64Async()
         {
             string GetPercentClass(double percent) => percent >= 0 ? "positivo" : "negativo";
@@ -32,12 +34,13 @@ namespace MarketDataFinance.Application.Services
             var eurBRL = await _financeChartAppService.SearchChartFinance("EURBRL%3DX");
             var nasdaq = await _financeChartAppService.SearchChartFinance("^IXIC");
 
-            MetaFinanceChartViewModel? metaIbovesp = ibovespa?.Chart?.Result?[0]?.Meta;
-            MetaFinanceChartViewModel? metaUsd = usdBRL?.Chart?.Result?[0]?.Meta;
-            MetaFinanceChartViewModel? metasep500 = sep500?.Chart?.Result?[0]?.Meta;
-            MetaFinanceChartViewModel? metaEur = eurBRL?.Chart?.Result?[0]?.Meta;
-            MetaFinanceChartViewModel? metaNasdaq = nasdaq?.Chart?.Result?[0]?.Meta;
-            //1
+            MetaFinanceChartViewModel metaIbovesp = ibovespa.Chart.Result[0].Meta;
+            MetaFinanceChartViewModel metaUsd = usdBRL.Chart.Result[0].Meta;
+            MetaFinanceChartViewModel metasep500 = sep500.Chart.Result[0].Meta;
+            MetaFinanceChartViewModel metaEur = eurBRL.Chart.Result[0].Meta;
+            MetaFinanceChartViewModel metaNasdaq = nasdaq.Chart.Result[0].Meta;
+
+
             double ibovespaPercent = ((metaIbovesp.RegularMarketPrice - metaIbovesp.ChartPreviousClose) / metaIbovesp.ChartPreviousClose) * 100;
             double usdPercent = ((metaUsd.RegularMarketPrice - metaUsd.ChartPreviousClose) / metaUsd.ChartPreviousClose) * 100;
             double sep500Percent = ((metasep500.RegularMarketPrice - metasep500.ChartPreviousClose) / metasep500.ChartPreviousClose) * 100;
@@ -63,7 +66,6 @@ namespace MarketDataFinance.Application.Services
             string sep500RegularMarketChangePercent = ((sep500Percent < 0) ? (sep500Percent * -1) : sep500Percent).ToString("N2").Replace(",", ".");
             string eurRegularMarketChangePercent = ((eurPercent < 0) ? (eurPercent * -1) : eurPercent).ToString("N2").Replace(",", ".");
             string nasdaqRegularMarketChangePercent = ((nasdaqPercent < 0) ? (nasdaqPercent * -1) : nasdaqPercent).ToString("N2").Replace(",", ".");
-
 
 
             string IbovespaRegularMarketPrice = Math.Truncate(ibovespa?.Chart?.Result?[0]?.Meta?.RegularMarketPrice ?? 0).ToString("N0").Replace(",", ".");

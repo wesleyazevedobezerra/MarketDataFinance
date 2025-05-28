@@ -8,7 +8,7 @@ namespace MarketDataFinance.Application.ViewModels
 {
     public class ChartViewModel
     {
-        public List<ResultViewModel>? Result { get; set; }
-        public object? Error { get; set; }
+        public List<ResultViewModel> Result { get; set; }
+        public object Error { get; set; }
     }
 }
