@@ -13,10 +13,8 @@ namespace MarketDataFinance.Application.Factories
 
         public static ScreenshotEntity SetEntityToViewModel(RootFinanceChartEntity entity)
         {
+
             return new ScreenshotEntity(entity.Chart.Result[0].Meta);
-
-
-
 
         }
 

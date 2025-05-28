@@ -1,8 +1,10 @@
 ﻿
 using MarketDataFinance.Adapter;
+using MarketDataFinance.Adapter.Helpers;
 using MarketDataFinance.Application.Interfaces;
 using MarketDataFinance.Application.Services;
 using MarketDataFinance.Domain.Contracts.Adapters;
+using MarketDataFinance.Domain.Contracts.Helpers;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace MarketDataFinance.Infrastructure.CrossCutting.Bootstrap
@@ -19,7 +21,7 @@ namespace MarketDataFinance.Infrastructure.CrossCutting.Bootstrap
             services.AddScoped<IAdapterData, AdapterData>();
             services.AddScoped<INewsAppService, NewsAppService>();
             services.AddScoped<IFinanceChartAppService, FinanceChartAppService>();
-
+            services.AddScoped<IHtmlToBase64Helper, HtmlToBase64Helper>();
         }
     }
 }
